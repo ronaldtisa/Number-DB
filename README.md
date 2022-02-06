@@ -1,36 +1,24 @@
-## Welcome to GitHub Pages
+## NumberDB
 
-You can use the [editor on GitHub](https://github.com/ronaldtisa/Number-DB/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+You can use the the program but at your own risk. And who ever can contribute pls do so
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Objective
 
-### Markdown
+I know that being a beginner doesnt mean it can stop me from do some code. So here i am trying to create a free to use Inventory Management system.
+If there is someone out there that accidently sees this, and want to leave a bad comment, please dont, I am not interested. I only interested to make, and make it better.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Screenshot
+1. Main menu
+![MainForm](https://user-images.githubusercontent.com/17664063/152684382-a8f20232-0b45-4039-aa59-b5796b2fdf89.jpg)
 
-```markdown
-Syntax highlighted code block
+2. Add Item menu/form
+![addItemForm](https://user-images.githubusercontent.com/17664063/152684518-756116f2-902f-454e-9ec0-a7a5052cfc76.jpg)
+3. Database Menu
+![createdbForm](https://user-images.githubusercontent.com/17664063/152684575-b328c13c-5e36-4c23-82a3-01f2e33fc474.jpg)
 
-# Header 1
-## Header 2
-### Header 3
+### Contribution?
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ronaldtisa/Number-DB/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+If you want to contribute please do so. But since i dont know how this git works, please bear with me.
 
 ### Support or Contact
 
