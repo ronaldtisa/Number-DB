@@ -31,7 +31,13 @@ Partial Class mainGUI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ItemControl = New System.Windows.Forms.TabControl()
         Me.Tab1 = New System.Windows.Forms.TabPage()
+        Me.DeleteButt_form = New System.Windows.Forms.Button()
+        Me.inventory_Audid_bttn = New System.Windows.Forms.Button()
+        Me.purchase_order_button = New System.Windows.Forms.Button()
         Me.AddItem = New System.Windows.Forms.Button()
+        Me.Tab2 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Tab3 = New System.Windows.Forms.TabPage()
         Me.CompanySetting = New System.Windows.Forms.Button()
         Me.ProgramSetting = New System.Windows.Forms.Button()
@@ -41,19 +47,13 @@ Partial Class mainGUI
         Me.TIval = New System.Windows.Forms.Label()
         Me.watch = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.purchase_order_button = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Tab2 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ItemControl.SuspendLayout()
         Me.Tab1.SuspendLayout()
+        Me.Tab2.SuspendLayout()
         Me.Tab3.SuspendLayout()
         CType(Me.ItemView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Tab2.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -136,8 +136,8 @@ Partial Class mainGUI
         Me.Tab1.BackColor = System.Drawing.Color.LightBlue
         Me.Tab1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Tab1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Tab1.Controls.Add(Me.Button4)
-        Me.Tab1.Controls.Add(Me.Button1)
+        Me.Tab1.Controls.Add(Me.DeleteButt_form)
+        Me.Tab1.Controls.Add(Me.inventory_Audid_bttn)
         Me.Tab1.Controls.Add(Me.purchase_order_button)
         Me.Tab1.Controls.Add(Me.AddItem)
         Me.Tab1.Font = New System.Drawing.Font("Arial", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, CType(0, Byte))
@@ -148,6 +148,60 @@ Partial Class mainGUI
         Me.Tab1.Size = New System.Drawing.Size(622, 85)
         Me.Tab1.TabIndex = 0
         Me.Tab1.Text = "Item Management"
+        '
+        'DeleteButt_form
+        '
+        Me.DeleteButt_form.BackColor = System.Drawing.SystemColors.Info
+        Me.DeleteButt_form.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DeleteButt_form.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DeleteButt_form.FlatAppearance.BorderSize = 2
+        Me.DeleteButt_form.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.DeleteButt_form.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteButt_form.ForeColor = System.Drawing.Color.Black
+        Me.DeleteButt_form.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.DeleteButt_form.Location = New System.Drawing.Point(168, 8)
+        Me.DeleteButt_form.Name = "DeleteButt_form"
+        Me.DeleteButt_form.Size = New System.Drawing.Size(120, 64)
+        Me.DeleteButt_form.TabIndex = 9
+        Me.DeleteButt_form.Text = "Delete Item"
+        Me.DeleteButt_form.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.DeleteButt_form.UseVisualStyleBackColor = False
+        '
+        'inventory_Audid_bttn
+        '
+        Me.inventory_Audid_bttn.BackColor = System.Drawing.SystemColors.Info
+        Me.inventory_Audid_bttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inventory_Audid_bttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.inventory_Audid_bttn.FlatAppearance.BorderSize = 2
+        Me.inventory_Audid_bttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.inventory_Audid_bttn.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.inventory_Audid_bttn.ForeColor = System.Drawing.Color.Black
+        Me.inventory_Audid_bttn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.inventory_Audid_bttn.Location = New System.Drawing.Point(472, 8)
+        Me.inventory_Audid_bttn.Name = "inventory_Audid_bttn"
+        Me.inventory_Audid_bttn.Size = New System.Drawing.Size(120, 64)
+        Me.inventory_Audid_bttn.TabIndex = 8
+        Me.inventory_Audid_bttn.Text = "Inventory Audit Form"
+        Me.inventory_Audid_bttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.inventory_Audid_bttn.UseVisualStyleBackColor = False
+        '
+        'purchase_order_button
+        '
+        Me.purchase_order_button.BackColor = System.Drawing.SystemColors.Info
+        Me.purchase_order_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.purchase_order_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.purchase_order_button.FlatAppearance.BorderSize = 2
+        Me.purchase_order_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.purchase_order_button.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.purchase_order_button.ForeColor = System.Drawing.Color.Black
+        Me.purchase_order_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.purchase_order_button.Location = New System.Drawing.Point(320, 8)
+        Me.purchase_order_button.Name = "purchase_order_button"
+        Me.purchase_order_button.Size = New System.Drawing.Size(120, 64)
+        Me.purchase_order_button.TabIndex = 7
+        Me.purchase_order_button.Text = "Purchase Order"
+        Me.purchase_order_button.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.purchase_order_button.UseVisualStyleBackColor = False
         '
         'AddItem
         '
@@ -166,6 +220,55 @@ Partial Class mainGUI
         Me.AddItem.Text = "Create Item"
         Me.AddItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.AddItem.UseVisualStyleBackColor = False
+        '
+        'Tab2
+        '
+        Me.Tab2.BackColor = System.Drawing.Color.LightBlue
+        Me.Tab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Tab2.Controls.Add(Me.Button3)
+        Me.Tab2.Controls.Add(Me.Button2)
+        Me.Tab2.Location = New System.Drawing.Point(4, 22)
+        Me.Tab2.Name = "Tab2"
+        Me.Tab2.Padding = New System.Windows.Forms.Padding(3)
+        Me.Tab2.Size = New System.Drawing.Size(622, 85)
+        Me.Tab2.TabIndex = 2
+        Me.Tab2.Text = "Report tools"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.Info
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 2
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Black
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button3.Location = New System.Drawing.Point(168, 8)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(120, 64)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Item Performance"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.Info
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 2
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.Location = New System.Drawing.Point(16, 8)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(120, 64)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Inventory Performance"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Tab3
         '
@@ -245,8 +348,10 @@ Partial Class mainGUI
         Me.ItemView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ItemView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.ItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ItemView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.ItemView.Location = New System.Drawing.Point(1, 192)
         Me.ItemView.Name = "ItemView"
+        Me.ItemView.ReadOnly = True
         Me.ItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ItemView.Size = New System.Drawing.Size(1262, 466)
         Me.ItemView.TabIndex = 10
@@ -289,109 +394,6 @@ Partial Class mainGUI
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
-        'purchase_order_button
-        '
-        Me.purchase_order_button.BackColor = System.Drawing.SystemColors.Info
-        Me.purchase_order_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.purchase_order_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.purchase_order_button.FlatAppearance.BorderSize = 2
-        Me.purchase_order_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.purchase_order_button.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.purchase_order_button.ForeColor = System.Drawing.Color.Black
-        Me.purchase_order_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.purchase_order_button.Location = New System.Drawing.Point(320, 8)
-        Me.purchase_order_button.Name = "purchase_order_button"
-        Me.purchase_order_button.Size = New System.Drawing.Size(120, 64)
-        Me.purchase_order_button.TabIndex = 7
-        Me.purchase_order_button.Text = "Purchase Order"
-        Me.purchase_order_button.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.purchase_order_button.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Info
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(472, 8)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 64)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Inventory Audit Form"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Tab2
-        '
-        Me.Tab2.BackColor = System.Drawing.Color.LightBlue
-        Me.Tab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Tab2.Controls.Add(Me.Button3)
-        Me.Tab2.Controls.Add(Me.Button2)
-        Me.Tab2.Location = New System.Drawing.Point(4, 22)
-        Me.Tab2.Name = "Tab2"
-        Me.Tab2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab2.Size = New System.Drawing.Size(622, 85)
-        Me.Tab2.TabIndex = 2
-        Me.Tab2.Text = "Report tools"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Info
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 2
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button2.Location = New System.Drawing.Point(16, 8)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 64)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Inventory Performance"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.Info
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 2
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button3.Location = New System.Drawing.Point(168, 8)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 64)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Item Performance"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.SystemColors.Info
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button4.FlatAppearance.BorderSize = 2
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button4.Location = New System.Drawing.Point(168, 8)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(120, 64)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "Delete Item"
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'mainGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -419,10 +421,10 @@ Partial Class mainGUI
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ItemControl.ResumeLayout(False)
         Me.Tab1.ResumeLayout(False)
+        Me.Tab2.ResumeLayout(False)
         Me.Tab3.ResumeLayout(False)
         CType(Me.ItemView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Tab2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,10 +446,10 @@ Partial Class mainGUI
     Friend WithEvents TIval As System.Windows.Forms.Label
     Friend WithEvents watch As System.Windows.Forms.Timer
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents inventory_Audid_bttn As System.Windows.Forms.Button
     Friend WithEvents purchase_order_button As System.Windows.Forms.Button
     Friend WithEvents Tab2 As System.Windows.Forms.TabPage
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents DeleteButt_form As System.Windows.Forms.Button
 End Class

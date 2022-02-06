@@ -180,4 +180,19 @@ Public Class mainGUI
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
     End Sub
+
+    Private Sub DeleteButt_form_Click(sender As Object, e As EventArgs) Handles DeleteButt_form.Click
+        DeleteItem_form.Show()
+
+    End Sub
+
+    Private Sub purchase_order_button_Click(sender As Object, e As EventArgs) Handles purchase_order_button.Click
+        PurchaseOrder_form.Show()
+
+    End Sub
+
+    Private Sub inventory_Audid_bttn_Click(sender As Object, e As EventArgs) Handles inventory_Audid_bttn.Click
+        InventoryAudit_form.Show()
+
+    End Sub
 End Class
