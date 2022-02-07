@@ -156,6 +156,9 @@
     <EmbeddedResource Include="add_item.resx">
       <DependentUpon>add_item.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteItem_form.resx">
+      <DependentUpon>DeleteItem_form.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainGUI.resx">
       <DependentUpon>mainGUI.vb</DependentUpon>
     </EmbeddedResource>

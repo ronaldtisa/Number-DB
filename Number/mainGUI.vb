@@ -80,7 +80,42 @@ Public Class mainGUI
         Quantity.Width = "100"
         ItemView.Columns.Insert(5, Quantity)
 
+        Dim UnitPrice As DataGridViewColumn = New DataGridViewTextBoxColumn()
+        UnitPrice.Name = "UnitPrice"
+        UnitPrice.HeaderText = "Unit Price"
+        UnitPrice.DataPropertyName = "UnitPrice"
+        UnitPrice.Width = "100"
+        ItemView.Columns.Insert(6, UnitPrice)
         ItemView.DataSource = Nothing
+
+        Dim TotalPriceValue As DataGridViewColumn = New DataGridViewTextBoxColumn()
+        TotalPriceValue.Name = "TotalPriceValue"
+        TotalPriceValue.HeaderText = "Total Value"
+        TotalPriceValue.DataPropertyName = "TotalPriceValue"
+        TotalPriceValue.Width = "100"
+        ItemView.Columns.Insert(7, TotalPriceValue)
+
+        Dim UnitTax As DataGridViewColumn = New DataGridViewTextBoxColumn()
+        UnitTax.Name = "UnitTax"
+        UnitTax.HeaderText = "Unit Tax"
+        UnitTax.DataPropertyName = "UnitTax"
+        UnitTax.Width = "100"
+        ItemView.Columns.Insert(7, UnitTax)
+
+        Dim TotalTax As DataGridViewColumn = New DataGridViewTextBoxColumn()
+        TotalTax.Name = "TotalTax"
+        TotalTax.HeaderText = "Total Tax"
+        TotalTax.DataPropertyName = "TotalTax"
+        TotalTax.Width = "100"
+        ItemView.Columns.Insert(7, TotalTax)
+
+
+
+
+
+        ItemView.DataSource = Nothing
+
+
         ''===============================
         ''bind datagridview(ItemView)
         ''================================

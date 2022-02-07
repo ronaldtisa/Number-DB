@@ -42,18 +42,19 @@ Partial Class mainGUI
         Me.CompanySetting = New System.Windows.Forms.Button()
         Me.ProgramSetting = New System.Windows.Forms.Button()
         Me.CreateDB = New System.Windows.Forms.Button()
-        Me.ItemView = New System.Windows.Forms.DataGridView()
         Me.DMYval = New System.Windows.Forms.Label()
         Me.TIval = New System.Windows.Forms.Label()
         Me.watch = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ItemUpdateBttn = New System.Windows.Forms.Button()
+        Me.ItemView = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ItemControl.SuspendLayout()
         Me.Tab1.SuspendLayout()
         Me.Tab2.SuspendLayout()
         Me.Tab3.SuspendLayout()
-        CType(Me.ItemView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -128,7 +129,7 @@ Partial Class mainGUI
         Me.ItemControl.Name = "ItemControl"
         Me.ItemControl.SelectedIndex = 0
         Me.ItemControl.ShowToolTips = True
-        Me.ItemControl.Size = New System.Drawing.Size(630, 111)
+        Me.ItemControl.Size = New System.Drawing.Size(782, 111)
         Me.ItemControl.TabIndex = 9
         '
         'Tab1
@@ -136,6 +137,7 @@ Partial Class mainGUI
         Me.Tab1.BackColor = System.Drawing.Color.LightBlue
         Me.Tab1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Tab1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Tab1.Controls.Add(Me.ItemUpdateBttn)
         Me.Tab1.Controls.Add(Me.DeleteButt_form)
         Me.Tab1.Controls.Add(Me.inventory_Audid_bttn)
         Me.Tab1.Controls.Add(Me.purchase_order_button)
@@ -145,7 +147,7 @@ Partial Class mainGUI
         Me.Tab1.Location = New System.Drawing.Point(4, 22)
         Me.Tab1.Name = "Tab1"
         Me.Tab1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab1.Size = New System.Drawing.Size(622, 85)
+        Me.Tab1.Size = New System.Drawing.Size(774, 85)
         Me.Tab1.TabIndex = 0
         Me.Tab1.Text = "Item Management"
         '
@@ -286,44 +288,43 @@ Partial Class mainGUI
         '
         'CompanySetting
         '
-        Me.CompanySetting.BackgroundImage = CType(resources.GetObject("CompanySetting.BackgroundImage"), System.Drawing.Image)
+        Me.CompanySetting.BackColor = System.Drawing.SystemColors.Info
         Me.CompanySetting.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.CompanySetting.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSteelBlue
         Me.CompanySetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua
         Me.CompanySetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CompanySetting.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.CompanySetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, CType(0, Byte))
+        Me.CompanySetting.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CompanySetting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CompanySetting.Location = New System.Drawing.Point(168, 8)
         Me.CompanySetting.Name = "CompanySetting"
         Me.CompanySetting.Size = New System.Drawing.Size(120, 64)
         Me.CompanySetting.TabIndex = 5
         Me.CompanySetting.Text = "Company"
-        Me.CompanySetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CompanySetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.CompanySetting.UseVisualStyleBackColor = True
+        Me.CompanySetting.UseVisualStyleBackColor = False
         '
         'ProgramSetting
         '
-        Me.ProgramSetting.BackgroundImage = CType(resources.GetObject("ProgramSetting.BackgroundImage"), System.Drawing.Image)
+        Me.ProgramSetting.BackColor = System.Drawing.SystemColors.Info
         Me.ProgramSetting.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.ProgramSetting.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSteelBlue
         Me.ProgramSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua
         Me.ProgramSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ProgramSetting.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ProgramSetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, CType(0, Byte))
+        Me.ProgramSetting.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProgramSetting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ProgramSetting.Location = New System.Drawing.Point(320, 8)
         Me.ProgramSetting.Name = "ProgramSetting"
         Me.ProgramSetting.Size = New System.Drawing.Size(120, 64)
         Me.ProgramSetting.TabIndex = 4
         Me.ProgramSetting.Text = "Create Database"
-        Me.ProgramSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ProgramSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.ProgramSetting.UseVisualStyleBackColor = True
+        Me.ProgramSetting.UseVisualStyleBackColor = False
         '
         'CreateDB
         '
+        Me.CreateDB.BackColor = System.Drawing.SystemColors.Info
         Me.CreateDB.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.CreateDB.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSteelBlue
         Me.CreateDB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua
@@ -338,23 +339,7 @@ Partial Class mainGUI
         Me.CreateDB.TabIndex = 2
         Me.CreateDB.Text = "Create Database"
         Me.CreateDB.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.CreateDB.UseVisualStyleBackColor = True
-        '
-        'ItemView
-        '
-        Me.ItemView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ItemView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.ItemView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ItemView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        Me.ItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ItemView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.ItemView.Location = New System.Drawing.Point(1, 192)
-        Me.ItemView.Name = "ItemView"
-        Me.ItemView.ReadOnly = True
-        Me.ItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ItemView.Size = New System.Drawing.Size(1262, 466)
-        Me.ItemView.TabIndex = 10
+        Me.CreateDB.UseVisualStyleBackColor = False
         '
         'DMYval
         '
@@ -394,6 +379,40 @@ Partial Class mainGUI
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
+        'ItemUpdateBttn
+        '
+        Me.ItemUpdateBttn.BackColor = System.Drawing.SystemColors.Info
+        Me.ItemUpdateBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ItemUpdateBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ItemUpdateBttn.FlatAppearance.BorderSize = 2
+        Me.ItemUpdateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ItemUpdateBttn.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ItemUpdateBttn.ForeColor = System.Drawing.Color.Black
+        Me.ItemUpdateBttn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ItemUpdateBttn.Location = New System.Drawing.Point(623, 8)
+        Me.ItemUpdateBttn.Name = "ItemUpdateBttn"
+        Me.ItemUpdateBttn.Size = New System.Drawing.Size(120, 64)
+        Me.ItemUpdateBttn.TabIndex = 10
+        Me.ItemUpdateBttn.Text = "Item Update"
+        Me.ItemUpdateBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.ItemUpdateBttn.UseVisualStyleBackColor = False
+        '
+        'ItemView
+        '
+        Me.ItemView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ItemView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.ItemView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ItemView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.ItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ItemView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.ItemView.Location = New System.Drawing.Point(1, 192)
+        Me.ItemView.Name = "ItemView"
+        Me.ItemView.ReadOnly = True
+        Me.ItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.ItemView.Size = New System.Drawing.Size(1262, 466)
+        Me.ItemView.TabIndex = 10
+        '
         'mainGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -423,8 +442,8 @@ Partial Class mainGUI
         Me.Tab1.ResumeLayout(False)
         Me.Tab2.ResumeLayout(False)
         Me.Tab3.ResumeLayout(False)
-        CType(Me.ItemView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -441,7 +460,6 @@ Partial Class mainGUI
     Friend WithEvents CompanySetting As System.Windows.Forms.Button
     Friend WithEvents ProgramSetting As System.Windows.Forms.Button
     Friend WithEvents AddItem As System.Windows.Forms.Button
-    Friend WithEvents ItemView As System.Windows.Forms.DataGridView
     Friend WithEvents DMYval As System.Windows.Forms.Label
     Friend WithEvents TIval As System.Windows.Forms.Label
     Friend WithEvents watch As System.Windows.Forms.Timer
@@ -452,4 +470,6 @@ Partial Class mainGUI
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DeleteButt_form As System.Windows.Forms.Button
+    Friend WithEvents ItemUpdateBttn As System.Windows.Forms.Button
+    Friend WithEvents ItemView As System.Windows.Forms.DataGridView
 End Class
