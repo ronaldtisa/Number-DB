@@ -28,9 +28,9 @@ Partial Class mainGUI
         Me.minimizemain = New System.Windows.Forms.Button()
         Me.CloseMain = New System.Windows.Forms.Button()
         Me.maximizeMain = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ItemControl = New System.Windows.Forms.TabControl()
         Me.Tab1 = New System.Windows.Forms.TabPage()
+        Me.ItemUpdateBttn = New System.Windows.Forms.Button()
         Me.DeleteButt_form = New System.Windows.Forms.Button()
         Me.inventory_Audid_bttn = New System.Windows.Forms.Button()
         Me.purchase_order_button = New System.Windows.Forms.Button()
@@ -46,9 +46,7 @@ Partial Class mainGUI
         Me.TIval = New System.Windows.Forms.Label()
         Me.watch = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ItemUpdateBttn = New System.Windows.Forms.Button()
         Me.ItemView = New System.Windows.Forms.DataGridView()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ItemControl.SuspendLayout()
         Me.Tab1.SuspendLayout()
         Me.Tab2.SuspendLayout()
@@ -102,21 +100,6 @@ Partial Class mainGUI
         Me.maximizeMain.Text = "[ ||| ]"
         Me.maximizeMain.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1264, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
-        '
         'ItemControl
         '
         Me.ItemControl.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -125,7 +108,7 @@ Partial Class mainGUI
         Me.ItemControl.Controls.Add(Me.Tab1)
         Me.ItemControl.Controls.Add(Me.Tab2)
         Me.ItemControl.Controls.Add(Me.Tab3)
-        Me.ItemControl.Location = New System.Drawing.Point(1, 52)
+        Me.ItemControl.Location = New System.Drawing.Point(1, 75)
         Me.ItemControl.Name = "ItemControl"
         Me.ItemControl.SelectedIndex = 0
         Me.ItemControl.ShowToolTips = True
@@ -150,6 +133,24 @@ Partial Class mainGUI
         Me.Tab1.Size = New System.Drawing.Size(774, 85)
         Me.Tab1.TabIndex = 0
         Me.Tab1.Text = "Item Management"
+        '
+        'ItemUpdateBttn
+        '
+        Me.ItemUpdateBttn.BackColor = System.Drawing.SystemColors.Info
+        Me.ItemUpdateBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ItemUpdateBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ItemUpdateBttn.FlatAppearance.BorderSize = 2
+        Me.ItemUpdateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ItemUpdateBttn.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ItemUpdateBttn.ForeColor = System.Drawing.Color.Black
+        Me.ItemUpdateBttn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ItemUpdateBttn.Location = New System.Drawing.Point(623, 8)
+        Me.ItemUpdateBttn.Name = "ItemUpdateBttn"
+        Me.ItemUpdateBttn.Size = New System.Drawing.Size(120, 64)
+        Me.ItemUpdateBttn.TabIndex = 10
+        Me.ItemUpdateBttn.Text = "Item Update"
+        Me.ItemUpdateBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.ItemUpdateBttn.UseVisualStyleBackColor = False
         '
         'DeleteButt_form
         '
@@ -232,7 +233,7 @@ Partial Class mainGUI
         Me.Tab2.Location = New System.Drawing.Point(4, 22)
         Me.Tab2.Name = "Tab2"
         Me.Tab2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab2.Size = New System.Drawing.Size(622, 85)
+        Me.Tab2.Size = New System.Drawing.Size(774, 85)
         Me.Tab2.TabIndex = 2
         Me.Tab2.Text = "Report tools"
         '
@@ -282,7 +283,7 @@ Partial Class mainGUI
         Me.Tab3.Location = New System.Drawing.Point(4, 22)
         Me.Tab3.Name = "Tab3"
         Me.Tab3.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab3.Size = New System.Drawing.Size(622, 85)
+        Me.Tab3.Size = New System.Drawing.Size(774, 85)
         Me.Tab3.TabIndex = 1
         Me.Tab3.Text = "Setting / Account"
         '
@@ -345,11 +346,11 @@ Partial Class mainGUI
         '
         Me.DMYval.AutoSize = True
         Me.DMYval.BackColor = System.Drawing.Color.Transparent
-        Me.DMYval.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DMYval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DMYval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DMYval.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.DMYval.Location = New System.Drawing.Point(962, 1)
         Me.DMYval.Name = "DMYval"
-        Me.DMYval.Size = New System.Drawing.Size(59, 22)
+        Me.DMYval.Size = New System.Drawing.Size(63, 20)
         Me.DMYval.TabIndex = 11
         Me.DMYval.Text = "Label1"
         Me.DMYval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -358,11 +359,11 @@ Partial Class mainGUI
         '
         Me.TIval.AutoSize = True
         Me.TIval.BackColor = System.Drawing.Color.Transparent
-        Me.TIval.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TIval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TIval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TIval.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.TIval.Location = New System.Drawing.Point(962, 26)
         Me.TIval.Name = "TIval"
-        Me.TIval.Size = New System.Drawing.Size(59, 22)
+        Me.TIval.Size = New System.Drawing.Size(63, 20)
         Me.TIval.TabIndex = 12
         Me.TIval.Text = "Label1"
         Me.TIval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -378,24 +379,6 @@ Partial Class mainGUI
         Me.PictureBox2.Size = New System.Drawing.Size(80, 40)
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
-        '
-        'ItemUpdateBttn
-        '
-        Me.ItemUpdateBttn.BackColor = System.Drawing.SystemColors.Info
-        Me.ItemUpdateBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ItemUpdateBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ItemUpdateBttn.FlatAppearance.BorderSize = 2
-        Me.ItemUpdateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ItemUpdateBttn.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemUpdateBttn.ForeColor = System.Drawing.Color.Black
-        Me.ItemUpdateBttn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.ItemUpdateBttn.Location = New System.Drawing.Point(623, 8)
-        Me.ItemUpdateBttn.Name = "ItemUpdateBttn"
-        Me.ItemUpdateBttn.Size = New System.Drawing.Size(120, 64)
-        Me.ItemUpdateBttn.TabIndex = 10
-        Me.ItemUpdateBttn.Text = "Item Update"
-        Me.ItemUpdateBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.ItemUpdateBttn.UseVisualStyleBackColor = False
         '
         'ItemView
         '
@@ -419,7 +402,7 @@ Partial Class mainGUI
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.DMYval)
         Me.Controls.Add(Me.TIval)
@@ -430,14 +413,12 @@ Partial Class mainGUI
         Me.Controls.Add(Me.maximizeMain)
         Me.Controls.Add(Me.ItemControl)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "mainGUI"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "mainGUI"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ItemControl.ResumeLayout(False)
         Me.Tab1.ResumeLayout(False)
         Me.Tab2.ResumeLayout(False)
@@ -452,7 +433,6 @@ Partial Class mainGUI
     Friend WithEvents minimizemain As System.Windows.Forms.Button
     Friend WithEvents CloseMain As System.Windows.Forms.Button
     Friend WithEvents maximizeMain As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents ItemControl As System.Windows.Forms.TabControl
     Friend WithEvents Tab1 As System.Windows.Forms.TabPage
     Friend WithEvents Tab3 As System.Windows.Forms.TabPage

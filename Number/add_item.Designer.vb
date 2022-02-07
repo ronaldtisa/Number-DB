@@ -369,8 +369,8 @@ Partial Class add_item
         Me.Controls.Add(Me.exitAdd)
         Me.Controls.Add(Me.minimizeAdd)
         Me.Controls.Add(Me.ItemName)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "add_item"
