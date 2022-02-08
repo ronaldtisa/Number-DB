@@ -167,7 +167,12 @@ Public Class mainGUI
     ''buttonMaximized
     ''====================================================
     Private Sub maximize_Click(sender As Object, e As EventArgs) Handles maximizeMain.Click
-        Me.WindowState = FormWindowState.Maximized
+        If WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        Else
+            Me.WindowState = FormWindowState.Maximized
+        End If
+
     End Sub
 
     ''====================================================

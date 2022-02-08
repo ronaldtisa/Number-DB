@@ -47,12 +47,14 @@ Partial Class mainGUI
         Me.watch = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ItemView = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ItemControl.SuspendLayout()
         Me.Tab1.SuspendLayout()
         Me.Tab2.SuspendLayout()
         Me.Tab3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -102,9 +104,6 @@ Partial Class mainGUI
         '
         'ItemControl
         '
-        Me.ItemControl.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ItemControl.Controls.Add(Me.Tab1)
         Me.ItemControl.Controls.Add(Me.Tab2)
         Me.ItemControl.Controls.Add(Me.Tab3)
@@ -113,6 +112,7 @@ Partial Class mainGUI
         Me.ItemControl.SelectedIndex = 0
         Me.ItemControl.ShowToolTips = True
         Me.ItemControl.Size = New System.Drawing.Size(782, 111)
+        Me.ItemControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.ItemControl.TabIndex = 9
         '
         'Tab1
@@ -346,11 +346,11 @@ Partial Class mainGUI
         '
         Me.DMYval.AutoSize = True
         Me.DMYval.BackColor = System.Drawing.Color.Transparent
-        Me.DMYval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DMYval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DMYval.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.DMYval.Location = New System.Drawing.Point(962, 1)
+        Me.DMYval.Location = New System.Drawing.Point(963, 0)
         Me.DMYval.Name = "DMYval"
-        Me.DMYval.Size = New System.Drawing.Size(63, 20)
+        Me.DMYval.Size = New System.Drawing.Size(57, 18)
         Me.DMYval.TabIndex = 11
         Me.DMYval.Text = "Label1"
         Me.DMYval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -359,11 +359,11 @@ Partial Class mainGUI
         '
         Me.TIval.AutoSize = True
         Me.TIval.BackColor = System.Drawing.Color.Transparent
-        Me.TIval.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TIval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TIval.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.TIval.Location = New System.Drawing.Point(962, 26)
+        Me.TIval.Location = New System.Drawing.Point(963, 22)
         Me.TIval.Name = "TIval"
-        Me.TIval.Size = New System.Drawing.Size(63, 20)
+        Me.TIval.Size = New System.Drawing.Size(57, 18)
         Me.TIval.TabIndex = 12
         Me.TIval.Text = "Label1"
         Me.TIval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -382,7 +382,8 @@ Partial Class mainGUI
         '
         'ItemView
         '
-        Me.ItemView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ItemView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ItemView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.ItemView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -396,6 +397,20 @@ Partial Class mainGUI
         Me.ItemView.Size = New System.Drawing.Size(1262, 466)
         Me.ItemView.TabIndex = 10
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.DMYval)
+        Me.Panel1.Controls.Add(Me.TIval)
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1266, 40)
+        Me.Panel1.TabIndex = 14
+        '
         'mainGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -404,13 +419,12 @@ Partial Class mainGUI
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.DMYval)
-        Me.Controls.Add(Me.TIval)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.ItemView)
         Me.Controls.Add(Me.minimizemain)
         Me.Controls.Add(Me.CloseMain)
         Me.Controls.Add(Me.maximizeMain)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ItemControl)
         Me.Controls.Add(Me.StatusStrip1)
         Me.DoubleBuffered = True
@@ -425,6 +439,8 @@ Partial Class mainGUI
         Me.Tab3.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -452,4 +468,5 @@ Partial Class mainGUI
     Friend WithEvents DeleteButt_form As System.Windows.Forms.Button
     Friend WithEvents ItemUpdateBttn As System.Windows.Forms.Button
     Friend WithEvents ItemView As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
