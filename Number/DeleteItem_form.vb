@@ -51,6 +51,11 @@ Public Class DeleteItem_form
         sql = "SELECT * FROM Inventory"
         searchData(sql, searchresult)
     End Sub
+    Public Sub RefreshForm()
+
+        sql = "SELECT * FROM Inventory"
+        searchData(sql, searchresult)
+    End Sub
 
 
 
@@ -66,6 +71,7 @@ Public Class DeleteItem_form
         sql = "SELECT * FROM Inventory WHERE Code LIKE '%" & search_delete_btn.Text & "%' OR ProductName LIKE '%" & search_delete_btn.Text & "%'"
         searchData(sql, searchresult)
     End Sub
+
 
     Private Sub searchData(sql As String, dtg As DataGridView)
 
@@ -145,5 +151,25 @@ Public Class DeleteItem_form
         End If
         ''==='======================================
         ''gets a collection that contains all the rows
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim rindex As Integer
+
+        Dim row As DataGridViewRow
+        row = searchresult.Rows(rindex)
+        If MessageBox.Show(String.Format("Do you want to delete This Item?: {0}", row.Cells("Code").Value), "Confirmation", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            Using con As New SQLiteConnection(ConnectionString)
+                Using cmd As New SQLiteCommand("DELETE FROM Inventory WHERE Code = @Code", con)
+                    cmd.CommandType = CommandType.Text
+                    cmd.Parameters.AddWithValue("@Code", row.Cells("Code").Value)
+                    con.Open()
+                    cmd.ExecuteNonQuery()
+                    con.Close()
+                End Using
+            End Using
+            Me.RefreshForm()
+
+        End If
     End Sub
 End Class
