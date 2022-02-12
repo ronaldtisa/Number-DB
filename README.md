@@ -1,4 +1,5 @@
-## NumberDB
+## NumberDB ![Icon](https://user-images.githubusercontent.com/17664063/153708789-97c06f0a-7236-49f6-96b1-c804e3650eaf.png)
+
 
 You can use the the program but at your own risk. And who ever can contribute pls do so
 
@@ -9,10 +10,16 @@ If there is someone out there that accidently sees this, and want to leave a bad
 
 ### Screenshot
 1. Main menu
-![MainForm](https://user-images.githubusercontent.com/17664063/152684382-a8f20232-0b45-4039-aa59-b5796b2fdf89.jpg)
+![MainForm](https://user-images.githubusercontent.com/17664063/153708723-e36b8a3f-2f6f-46cd-9c0f-bdee9c0772e7.jpg)
+
 
 2. Add Item menu/form
-![addItemForm](https://user-images.githubusercontent.com/17664063/152684518-756116f2-902f-454e-9ec0-a7a5052cfc76.jpg)
+![addItemForm](https://user-images.githubusercontent.com/17664063/153708734-b474c3f4-7528-47c4-983a-c9f4aeccfe71.jpg)
+
+3. Delete Menu
+![Delete ItemFom](https://user-images.githubusercontent.com/17664063/153708752-08b28206-bfe3-4f25-b6b6-adafe5a41dc3.jpg)
+
+
 3. Database Menu
 ![createdbForm](https://user-images.githubusercontent.com/17664063/152684575-b328c13c-5e36-4c23-82a3-01f2e33fc474.jpg)
 
