@@ -35,6 +35,7 @@ Public Class mainGUI
         ItemView.AllowUserToAddRows = False
         ''Clear collum
         ItemView.Columns.Clear()
+
         ''add collum
         Dim Code As DataGridViewColumn = New DataGridViewTextBoxColumn()
         Code.Name = "Code"
@@ -86,50 +87,31 @@ Public Class mainGUI
         UnitPrice.DataPropertyName = "UnitPrice"
         UnitPrice.Width = "100"
         ItemView.Columns.Insert(6, UnitPrice)
-        ItemView.DataSource = Nothing
-
-        Dim TotalPriceValue As DataGridViewColumn = New DataGridViewTextBoxColumn()
-        TotalPriceValue.Name = "TotalPriceValue"
-        TotalPriceValue.HeaderText = "Total Value"
-        TotalPriceValue.DataPropertyName = "TotalPriceValue"
-        TotalPriceValue.Width = "100"
-        ItemView.Columns.Insert(7, TotalPriceValue)
 
         Dim UnitTax As DataGridViewColumn = New DataGridViewTextBoxColumn()
         UnitTax.Name = "UnitTax"
+
         UnitTax.HeaderText = "Unit Tax"
         UnitTax.DataPropertyName = "UnitTax"
         UnitTax.Width = "100"
-        ItemView.Columns.Insert(8, UnitTax)
-
-        Dim TotalTax As DataGridViewColumn = New DataGridViewTextBoxColumn()
-        TotalTax.Name = "TotalTax"
-        TotalTax.HeaderText = "Total Tax"
-        TotalTax.DataPropertyName = "TotalTax"
-        TotalTax.Width = "100"
-        ItemView.Columns.Insert(9, TotalTax)
-
-
-
-
+        ItemView.Columns.Insert(7, UnitTax)
 
         ItemView.DataSource = Nothing
-
-
         ''===============================
         ''bind datagridview(ItemView)
         ''================================
-
         Me.itemview_fill()
 
     End Sub
+
+
 
 
     Public Sub itemview_fill()
 
 
         Using Con As SQLiteConnection = New SQLiteConnection(ConnectionString)
-            Using cmd As SQLiteCommand = New SQLiteCommand("SELECT Code, ProductName, CompanyName, Address, Telephone, Quantity FROM Inventory", Con)
+            Using cmd As SQLiteCommand = New SQLiteCommand("SELECT Code, ProductName, CompanyName, Address, Telephone, Quantity, UnitPrice,(Quantity * UnitPrice) AS TotalValue, UnitTax, ROUND ((Quantity * UnitTax),0) AS TotalTax FROM Inventory", Con)
                 cmd.CommandType = CommandType.Text
                 Using sda As SQLiteDataAdapter = New SQLiteDataAdapter(cmd)
                     Using dt As New DataTable
@@ -153,7 +135,7 @@ Public Class mainGUI
     End Sub
 
 
- 
+
 
     ''====================================================
     ''button close

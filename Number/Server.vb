@@ -55,7 +55,7 @@ Public Class Server
     Public Sub createDatabase()
         If Not duplicateDataBase(fullPath) Then
 
-            Dim createTable As String = "CREATE TABLE 'Inventory'( 'Code' NCHAR, 'ProductName' NCHAR,'CompanyName' NCHAR, 'Address' NCHAR, 'Telephone' NCHAR, 'Quantity' NCHAR);"
+            Dim createTable As String = "CREATE TABLE 'Inventory'( 'Code' NCHAR, 'ProductName' NCHAR,'CompanyName' NCHAR, 'Address' NCHAR, 'Telephone' NCHAR, 'Quantity' NCHAR NULL, 'UnitPrice'NUM NULL, 'UnitTax' NUM NULL );"
 
             Using SqlConn As New SQLiteConnection(connectionString)
                 Dim cmd As New SQLiteCommand(createTable, SqlConn)

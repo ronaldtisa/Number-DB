@@ -65,22 +65,35 @@ Public Class add_item
 
 
         Dim sqlite_Con As New SQLiteConnection(ConnectionString)
-        Dim sqlite_com As New SQLiteCommand("INSERT INTO Inventory (Code, ProductName, CompanyName, Address, Telephone, Quantity) VALUES('" + ItemCode.Text + "','" + ItemName.Text + "','" + CompanydName.Text + "','" + Address.Text + "','" + Telephone.Text + "','" + Unit.Text + "')", sqlite_Con)
+        Dim sqlite_com As New SQLiteCommand("INSERT INTO Inventory (Code, ProductName, CompanyName, Address, Telephone, Quantity, UnitPrice, UnitTax) VALUES('" + ItemCode.Text + "','" + ItemName.Text + "','" + CompanydName.Text + "','" + Address.Text + "','" + Telephone.Text + "','" + Quantity.Text + "','" + UnitPrice.Text + "', '" + UnitTax.Text + "')", sqlite_Con)
         'integer holds the number of records inserted
         'you need to provide password for sql server
         sqlite_Con.Open()
-
-
         sqlite_com.ExecuteNonQuery()
-        MessageBox.Show("New Item Inserted")
+        mainGUI.reload_Main()
+        sqlite_Con.Close()
+
+        MsgBox("New Item Inserted", MsgBoxStyle.OkOnly)
+
+        ItemCode.Clear()
+        ItemName.Clear()
+        CompanydName.Clear()
+        Address.Clear()
+        Telephone.Clear()
+        Quantity.Clear()
+        UnitPrice.Clear()
+        UnitTax.Clear()
+
+
+
 
 
         ''==========================================================
         '' update main menu datagrid=after insert data==============
         ''==========================================================
 
-        mainGUI.reload_Main()
-        sqlite_Con.Close()
+       
+
 
     End Sub
 

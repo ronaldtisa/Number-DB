@@ -39,7 +39,7 @@ Partial Class add_item
         Me.Address = New System.Windows.Forms.TextBox()
         Me.Telephone = New System.Windows.Forms.TextBox()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Unit = New System.Windows.Forms.TextBox()
+        Me.Quantity = New System.Windows.Forms.TextBox()
         Me.ItemName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -48,6 +48,10 @@ Partial Class add_item
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.UnitTax = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.UnitPrice = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
@@ -256,13 +260,13 @@ Partial Class add_item
         Me.Button7.Text = "Add Item"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'Unit
+        'Quantity
         '
-        Me.Unit.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Unit.Location = New System.Drawing.Point(10, 500)
-        Me.Unit.Name = "Unit"
-        Me.Unit.Size = New System.Drawing.Size(410, 29)
-        Me.Unit.TabIndex = 14
+        Me.Quantity.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quantity.Location = New System.Drawing.Point(10, 500)
+        Me.Quantity.Name = "Quantity"
+        Me.Quantity.Size = New System.Drawing.Size(250, 29)
+        Me.Quantity.TabIndex = 14
         '
         'ItemName
         '
@@ -345,6 +349,42 @@ Partial Class add_item
         Me.Label7.TabIndex = 22
         Me.Label7.Text = "Add New Item"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(290, 480)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 18)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "Tax :"
+        '
+        'UnitTax
+        '
+        Me.UnitTax.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UnitTax.Location = New System.Drawing.Point(290, 500)
+        Me.UnitTax.Name = "UnitTax"
+        Me.UnitTax.Size = New System.Drawing.Size(190, 29)
+        Me.UnitTax.TabIndex = 24
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(500, 480)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(84, 18)
+        Me.Label9.TabIndex = 25
+        Me.Label9.Text = "Unit Price :"
+        '
+        'UnitPrice
+        '
+        Me.UnitPrice.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UnitPrice.Location = New System.Drawing.Point(500, 500)
+        Me.UnitPrice.Name = "UnitPrice"
+        Me.UnitPrice.Size = New System.Drawing.Size(190, 29)
+        Me.UnitPrice.TabIndex = 26
+        '
         'add_item
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -353,7 +393,11 @@ Partial Class add_item
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1071, 620)
-        Me.Controls.Add(Me.Unit)
+        Me.Controls.Add(Me.UnitPrice)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.UnitTax)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Quantity)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Telephone)
         Me.Controls.Add(Me.Address)
@@ -398,7 +442,7 @@ Partial Class add_item
     Friend WithEvents Address As System.Windows.Forms.TextBox
     Friend WithEvents Telephone As System.Windows.Forms.TextBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Unit As System.Windows.Forms.TextBox
+    Friend WithEvents Quantity As System.Windows.Forms.TextBox
     Friend WithEvents ItemName As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -407,4 +451,8 @@ Partial Class add_item
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents UnitTax As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents UnitPrice As System.Windows.Forms.TextBox
 End Class
