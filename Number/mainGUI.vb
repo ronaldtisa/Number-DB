@@ -100,14 +100,14 @@ Public Class mainGUI
         UnitTax.HeaderText = "Unit Tax"
         UnitTax.DataPropertyName = "UnitTax"
         UnitTax.Width = "100"
-        ItemView.Columns.Insert(7, UnitTax)
+        ItemView.Columns.Insert(8, UnitTax)
 
         Dim TotalTax As DataGridViewColumn = New DataGridViewTextBoxColumn()
         TotalTax.Name = "TotalTax"
         TotalTax.HeaderText = "Total Tax"
         TotalTax.DataPropertyName = "TotalTax"
         TotalTax.Width = "100"
-        ItemView.Columns.Insert(7, TotalTax)
+        ItemView.Columns.Insert(9, TotalTax)
 
 
 

@@ -22,37 +22,32 @@ Public Class Server
         ' Specify the directory you want to manipulate.
         Dim path As String = "c:\Number Data Folder"
 
-        Try
-            ' Determine whether the directory exists.
-            If Directory.Exists(path) Then
-                MsgBox("That path exists already. Use folder? This process is irreversible!", MsgBoxStyle.OkCancel, MsgBoxStyle.Information)
 
-                Dim MsgBoxResult As Boolean
-                If MsgBoxResult = False Then
-                    Return
-                End If
-                createDatabase()
+        ' Determine whether the directory exists.
+        If Directory.Exists(path) Then
+            MsgBox("That path exists already. Use folder? This process is irreversible!", MsgBoxStyle.OkCancel, MsgBoxStyle.Information)
 
-            Else
-                ' Try to create the directory.
-                Dim di As DirectoryInfo = Directory.CreateDirectory(path)
-                MsgBox("Folder path created.", MsgBoxStyle.Information, Title:="Success")
+            Dim MsgBoxResult As Boolean
+            If MsgBoxResult = False Then
+                Return
             End If
 
-           
-            ''==================================================================================
-            ''=====maybe later add delete function===========modify this code =====================================
-            ' Delete the directory.
-            '' di.Delete()
-            ''MsgBox("The directory was deleted successfully.")
-            ''====================================================================================
-            ''=============================================================================
 
-        Catch e As Exception
-            MsgBox("The process failed: {0}.", e.ToString())
-        End Try
+        Else
+            ' Try to create the directory.
+            Dim di As DirectoryInfo = Directory.CreateDirectory(path)
+            MsgBox("Folder path created.", MsgBoxStyle.Information, Title:="Success")
+            createDatabase()
+        End If
 
 
+        ''==================================================================================
+        ''=====maybe later add delete function===========modify this code =====================================
+        ' Delete the directory.
+        '' di.Delete()
+        ''MsgBox("The directory was deleted successfully.")
+        ''====================================================================================
+        ''=============================================================================
 
     End Sub
 
