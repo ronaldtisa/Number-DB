@@ -36,25 +36,25 @@ Partial Class PurchaseOrder_form
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPagePurchaseOrder = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Timer = New System.Windows.Forms.Timer(Me.components)
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.companylistgrid = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPagePurchaseOrder.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.companylistgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -205,77 +205,6 @@ Partial Class PurchaseOrder_form
         Me.TabPagePurchaseOrder.Text = "Purchase Order"
         Me.TabPagePurchaseOrder.ToolTipText = "Create Purchase Order bill for item ordering"
         '
-        'TabPage2
-        '
-        Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1264, 586)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Delivery Order"
-        Me.TabPage2.ToolTipText = "Update stock using Delivery Order form"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Timer
-        '
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 64)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(352, 528)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(296, 40)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(59, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(0, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(288, 22)
-        Me.TextBox1.TabIndex = 2
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(120, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 20)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Select Company"
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(360, 584)
-        Me.Panel2.TabIndex = 4
-        '
-        'Panel4
-        '
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Location = New System.Drawing.Point(376, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(880, 584)
-        Me.Panel4.TabIndex = 5
-        '
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.TextBox2)
@@ -295,6 +224,80 @@ Partial Class PurchaseOrder_form
         Me.TextBox2.TabIndex = 0
         Me.TextBox2.Text = "Purchase Order"
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Location = New System.Drawing.Point(376, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(880, 584)
+        Me.Panel4.TabIndex = 5
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.companylistgrid)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(360, 584)
+        Me.Panel2.TabIndex = 4
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(0, 40)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(288, 22)
+        Me.TextBox1.TabIndex = 2
+        '
+        'companylistgrid
+        '
+        Me.companylistgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.companylistgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.companylistgrid.Location = New System.Drawing.Point(0, 64)
+        Me.companylistgrid.Name = "companylistgrid"
+        Me.companylistgrid.ReadOnly = True
+        Me.companylistgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.companylistgrid.Size = New System.Drawing.Size(352, 528)
+        Me.companylistgrid.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(296, 40)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(59, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Search"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(120, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(125, 20)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Select Company"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1264, 586)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Delivery Order"
+        Me.TabPage2.ToolTipText = "Update stock using Delivery Order form"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Timer
+        '
         '
         'PurchaseOrder_form
         '
@@ -317,11 +320,11 @@ Partial Class PurchaseOrder_form
         Me.Panel3.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPagePurchaseOrder.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.companylistgrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -342,7 +345,7 @@ Partial Class PurchaseOrder_form
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents companylistgrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel

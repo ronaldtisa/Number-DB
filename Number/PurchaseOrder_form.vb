@@ -1,4 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
+
+
 
 Public Class PurchaseOrder_form
     Private Sub ClosePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles ClosePurchaseOrderForm.Click
@@ -45,10 +48,30 @@ Public Class PurchaseOrder_form
     Private Sub PurchaseOrder_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DoubleBuffered = True
         Timer.Start()
+        retrievedata()
+
     End Sub
     Private Sub watch_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
         Dim Today As Object
         Today = Now
         Timebot.Text = Format(Today, " h:mm:ss tt")
+    End Sub
+
+    ''=============================================================================
+    ''========== User Form ========================================================
+    ''=============================================================================
+    Private Const ConnectionString As String = ("Data Source=c:\Number Data Folder\numberform.db")
+    Public Sub retrievedata()
+        Dim purchaseDataCon As New SQLiteConnection(ConnectionString)
+        Dim purchaseDataCom As New SQLiteCommand("Select name As Supplier From sqlite_master where type='table' order by name;", purchaseDataCon)
+        purchaseDataCom.CommandType = CommandType.Text
+        Dim purchaseDataAdap As New SQLiteDataAdapter(purchaseDataCom)
+        Dim datagrid_dt As DataTable = New DataTable
+        Try
+            purchaseDataAdap.Fill(datagrid_dt)
+            companylistgrid.DataSource = datagrid_dt
+        Catch ex As Exception
+        End Try
+
     End Sub
 End Class
