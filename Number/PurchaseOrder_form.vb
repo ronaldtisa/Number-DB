@@ -44,5 +44,11 @@ Public Class PurchaseOrder_form
 
     Private Sub PurchaseOrder_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DoubleBuffered = True
+        Timer.Start()
+    End Sub
+    Private Sub watch_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
+        Dim Today As Object
+        Today = Now
+        Timebot.Text = Format(Today, " h:mm:ss tt")
     End Sub
 End Class
