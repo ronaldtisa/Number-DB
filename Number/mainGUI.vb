@@ -111,7 +111,7 @@ Public Class mainGUI
 
 
         Using Con As SQLiteConnection = New SQLiteConnection(ConnectionString)
-            Using cmd As SQLiteCommand = New SQLiteCommand("SELECT Code, ProductName, CompanyName, Address, Telephone, Quantity, UnitPrice,(Quantity * UnitPrice) AS TotalValue, UnitTax, ROUND ((Quantity * UnitTax),0) AS TotalTax FROM Inventory", Con)
+            Using cmd As SQLiteCommand = New SQLiteCommand("SELECT Code, ProductName, CompanyName, Address, Telephone, Quantity, UnitPrice,(Quantity * UnitPrice) AS TotalValue, UnitTax, ROUND (Quantity * UnitTax) AS TotalTax FROM Inventory", Con)
                 cmd.CommandType = CommandType.Text
                 Using sda As SQLiteDataAdapter = New SQLiteDataAdapter(cmd)
                     Using dt As New DataTable
@@ -126,12 +126,25 @@ Public Class mainGUI
                             '' MsgBox("You still have not set up database, please set up in setting page", Title:="Important")
 
                         End Try
+                        Using nextcmd As SQLiteCommand = New SQLiteCommand("Select ((Quantity)*(UnitPrice),2) AS TotalValue", Con)
+                            nextcmd.CommandType = CommandType.Text
+                            Using sda2 As SQLiteDataAdapter = New SQLiteDataAdapter(nextcmd)
+                                Using dt2 As New DataTable
+                                    Try
+                                        sda2.Fill(dt)
+                                        ItemView.DataSource = dt2
+                                    Catch ex As Exception
 
+                                    End Try
 
+                                End Using
+                            End Using
+                        End Using
                     End Using
                 End Using
             End Using
         End Using
+
     End Sub
 
 

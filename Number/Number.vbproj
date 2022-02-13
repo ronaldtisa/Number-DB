@@ -177,6 +177,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseOrder_form.resx">
+      <DependentUpon>PurchaseOrder_form.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
