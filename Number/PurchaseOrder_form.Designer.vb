@@ -36,45 +36,41 @@ Partial Class PurchaseOrder_form
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPagePurchaseOrder = New System.Windows.Forms.TabPage()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Control1 = New System.Windows.Forms.Control()
+        Me.purchasegridview = New System.Windows.Forms.DataGridView()
+        Me.No = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToOrder = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.companylistgrid = New System.Windows.Forms.DataGridView()
+        Me.tables = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.supplierto = New System.Windows.Forms.TextBox()
+        Me.supplieradd = New System.Windows.Forms.TextBox()
+        Me.supplierphone = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPagePurchaseOrder.SuspendLayout()
-        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.purchasegridview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.companylistgrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -198,6 +194,9 @@ Partial Class PurchaseOrder_form
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPagePurchaseOrder)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.ItemSize = New System.Drawing.Size(100, 30)
@@ -214,7 +213,6 @@ Partial Class PurchaseOrder_form
         '
         Me.TabPagePurchaseOrder.BackColor = System.Drawing.Color.Transparent
         Me.TabPagePurchaseOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TabPagePurchaseOrder.Controls.Add(Me.Panel5)
         Me.TabPagePurchaseOrder.Controls.Add(Me.Panel4)
         Me.TabPagePurchaseOrder.Controls.Add(Me.Panel2)
         Me.TabPagePurchaseOrder.Location = New System.Drawing.Point(4, 34)
@@ -225,45 +223,162 @@ Partial Class PurchaseOrder_form
         Me.TabPagePurchaseOrder.Text = "Purchase Order"
         Me.TabPagePurchaseOrder.ToolTipText = "Create Purchase Order bill for item ordering"
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.White
-        Me.Panel5.Controls.Add(Me.Label15)
-        Me.Panel5.Controls.Add(Me.Label16)
-        Me.Panel5.Controls.Add(Me.Label14)
-        Me.Panel5.Controls.Add(Me.Label13)
-        Me.Panel5.Controls.Add(Me.TextBox5)
-        Me.Panel5.Controls.Add(Me.TextBox6)
-        Me.Panel5.Controls.Add(Me.TextBox7)
-        Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Controls.Add(Me.Label11)
-        Me.Panel5.Controls.Add(Me.Label12)
-        Me.Panel5.Controls.Add(Me.DataGridView1)
-        Me.Panel5.Controls.Add(Me.TextBox4)
-        Me.Panel5.Controls.Add(Me.TextBox3)
-        Me.Panel5.Controls.Add(Me.TextBox2)
-        Me.Panel5.Controls.Add(Me.Label9)
-        Me.Panel5.Controls.Add(Me.Label8)
-        Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(496, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(760, 584)
-        Me.Panel5.TabIndex = 0
-        '
         'Panel4
         '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.supplierphone)
+        Me.Panel4.Controls.Add(Me.supplieradd)
+        Me.Panel4.Controls.Add(Me.supplierto)
+        Me.Panel4.Controls.Add(Me.Label6)
+        Me.Panel4.Controls.Add(Me.DateTimePicker1)
+        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.ComboBox2)
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.ComboBox1)
+        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.Control1)
+        Me.Panel4.Controls.Add(Me.purchasegridview)
         Me.Panel4.Location = New System.Drawing.Point(376, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(880, 584)
         Me.Panel4.TabIndex = 5
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(288, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(96, 16)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "Delivery Date :"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(288, 16)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(232, 25)
+        Me.DateTimePicker1.TabIndex = 27
+        Me.DateTimePicker1.Value = New Date(2022, 2, 14, 0, 0, 0, 0)
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(544, 40)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(109, 16)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Payment Terms :"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(544, 56)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(200, 24)
+        Me.ComboBox2.TabIndex = 25
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(544, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 16)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Prepared by :"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(544, 16)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 24)
+        Me.ComboBox1.TabIndex = 23
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(752, 56)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(99, 25)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Create PO"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Control1
+        '
+        Me.Control1.Location = New System.Drawing.Point(8, 0)
+        Me.Control1.Name = "Control1"
+        Me.Control1.Size = New System.Drawing.Size(864, 88)
+        Me.Control1.TabIndex = 22
+        Me.Control1.Text = "Control1"
+        '
+        'purchasegridview
+        '
+        Me.purchasegridview.AllowUserToAddRows = False
+        Me.purchasegridview.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.purchasegridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.purchasegridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.purchasegridview.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.No, Me.ProductCode, Me.ProductName, Me.Stock, Me.ToOrder})
+        Me.purchasegridview.Location = New System.Drawing.Point(0, 88)
+        Me.purchasegridview.Name = "purchasegridview"
+        Me.purchasegridview.Size = New System.Drawing.Size(880, 496)
+        Me.purchasegridview.TabIndex = 9
+        '
+        'No
+        '
+        Me.No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.No.DataPropertyName = "rowid"
+        Me.No.FillWeight = 126.9036!
+        Me.No.HeaderText = "No."
+        Me.No.Name = "No"
+        Me.No.ReadOnly = True
+        Me.No.Width = 50
+        '
+        'ProductCode
+        '
+        Me.ProductCode.DataPropertyName = "Code"
+        Me.ProductCode.FillWeight = 93.27411!
+        Me.ProductCode.HeaderText = "Product Code"
+        Me.ProductCode.Name = "ProductCode"
+        Me.ProductCode.ReadOnly = True
+        '
+        'ProductName
+        '
+        Me.ProductName.DataPropertyName = "ProductName"
+        Me.ProductName.FillWeight = 93.27411!
+        Me.ProductName.HeaderText = "Product Name"
+        Me.ProductName.Name = "ProductName"
+        Me.ProductName.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.DataPropertyName = "Quantity"
+        Me.Stock.FillWeight = 93.27411!
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        '
+        'ToOrder
+        '
+        Me.ToOrder.DataPropertyName = "UnitPrice"
+        Me.ToOrder.FillWeight = 93.27411!
+        Me.ToOrder.HeaderText = "Order Quantity"
+        Me.ToOrder.Name = "ToOrder"
+        '
         'Panel2
         '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.companylistgrid)
@@ -278,25 +393,38 @@ Partial Class PurchaseOrder_form
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(0, 40)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 64)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(288, 22)
         Me.TextBox1.TabIndex = 2
         '
         'companylistgrid
         '
+        Me.companylistgrid.AllowUserToAddRows = False
+        Me.companylistgrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.companylistgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.companylistgrid.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.companylistgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.companylistgrid.Location = New System.Drawing.Point(0, 64)
+        Me.companylistgrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tables})
+        Me.companylistgrid.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.companylistgrid.Location = New System.Drawing.Point(0, 88)
         Me.companylistgrid.Name = "companylistgrid"
         Me.companylistgrid.ReadOnly = True
         Me.companylistgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.companylistgrid.Size = New System.Drawing.Size(352, 528)
-        Me.companylistgrid.TabIndex = 0
+        Me.companylistgrid.Size = New System.Drawing.Size(360, 496)
+        Me.companylistgrid.TabIndex = 1
+        '
+        'tables
+        '
+        Me.tables.DataPropertyName = "name"
+        Me.tables.HeaderText = "Supplier"
+        Me.tables.Name = "tables"
+        Me.tables.ReadOnly = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(296, 40)
+        Me.Button1.Location = New System.Drawing.Point(296, 64)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(59, 23)
         Me.Button1.TabIndex = 1
@@ -328,199 +456,32 @@ Partial Class PurchaseOrder_form
         'Timer
         '
         '
-        'Label4
+        'supplierto
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(320, 8)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(127, 21)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Purchase Order"
+        Me.supplierto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supplierto.Location = New System.Drawing.Point(-1, -1)
+        Me.supplierto.Multiline = True
+        Me.supplierto.Name = "supplierto"
+        Me.supplierto.Size = New System.Drawing.Size(265, 20)
+        Me.supplierto.TabIndex = 29
         '
-        'Label5
+        'supplieradd
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(16, 32)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 15)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Supplier :"
+        Me.supplieradd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supplieradd.Location = New System.Drawing.Point(-1, 18)
+        Me.supplieradd.Multiline = True
+        Me.supplieradd.Name = "supplieradd"
+        Me.supplieradd.Size = New System.Drawing.Size(265, 40)
+        Me.supplieradd.TabIndex = 30
         '
-        'Label6
+        'supplierphone
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(584, 32)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 15)
-        Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Delivery Address :"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(16, 48)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 15)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Company Name :"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(16, 104)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(112, 15)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Company Address :"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(16, 184)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(88, 15)
-        Me.Label9.TabIndex = 5
-        Me.Label9.Text = "Telephone No :"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(16, 64)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(272, 40)
-        Me.TextBox2.TabIndex = 6
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(16, 120)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(272, 64)
-        Me.TextBox3.TabIndex = 7
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(16, 200)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(272, 24)
-        Me.TextBox4.TabIndex = 8
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 224)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(760, 336)
-        Me.DataGridView1.TabIndex = 9
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(480, 200)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(272, 24)
-        Me.TextBox5.TabIndex = 15
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(480, 120)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(272, 64)
-        Me.TextBox6.TabIndex = 14
-        '
-        'TextBox7
-        '
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(536, 64)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(272, 40)
-        Me.TextBox7.TabIndex = 13
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(480, 184)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 15)
-        Me.Label10.TabIndex = 12
-        Me.Label10.Text = "Telephone No :"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(480, 104)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(112, 15)
-        Me.Label11.TabIndex = 11
-        Me.Label11.Text = "Company Address :"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(480, 48)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(97, 15)
-        Me.Label12.TabIndex = 10
-        Me.Label12.Text = "Company Name :"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(16, 568)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(92, 15)
-        Me.Label13.TabIndex = 16
-        Me.Label13.Text = "Authorised By :"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(264, 568)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(38, 15)
-        Me.Label14.TabIndex = 17
-        Me.Label14.Text = "Date :"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(704, 568)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(38, 15)
-        Me.Label15.TabIndex = 19
-        Me.Label15.Text = "Date :"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(456, 568)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(80, 15)
-        Me.Label16.TabIndex = 18
-        Me.Label16.Text = "Received By :"
+        Me.supplierphone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supplierphone.Location = New System.Drawing.Point(-1, 57)
+        Me.supplierphone.Multiline = True
+        Me.supplierphone.Name = "supplierphone"
+        Me.supplierphone.Size = New System.Drawing.Size(265, 20)
+        Me.supplierphone.TabIndex = 31
         '
         'PurchaseOrder_form
         '
@@ -543,12 +504,12 @@ Partial Class PurchaseOrder_form
         Me.Panel3.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPagePurchaseOrder.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.purchasegridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.companylistgrid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -572,26 +533,23 @@ Partial Class PurchaseOrder_form
     Friend WithEvents companylistgrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Control1 As System.Windows.Forms.Control
+
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents purchasegridview As System.Windows.Forms.DataGridView
+    Friend WithEvents No As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ProductCode As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ProductName As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Stock As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ToOrder As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tables As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents supplierphone As System.Windows.Forms.TextBox
+    Friend WithEvents supplieradd As System.Windows.Forms.TextBox
+    Friend WithEvents supplierto As System.Windows.Forms.TextBox
 End Class

@@ -1,14 +1,11 @@
 ﻿Imports System.Runtime.InteropServices
 
-Public Class InventoryAudit_form
-
-
-
-    Private Sub ClosePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles CloseInventoryAuditForm.Click
+Public Class UpdateRecord
+    Private Sub ClosePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles CloseRecordUpdateForm.Click
         Me.Close()
     End Sub
 
-    Private Sub maximizePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles maximizeInventoryAuditForm.Click
+    Private Sub maximizePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles maximizeRecordUpdateForm.Click
         If WindowState = FormWindowState.Maximized Then
             Me.WindowState = FormWindowState.Normal
         Else
@@ -16,7 +13,7 @@ Public Class InventoryAudit_form
         End If
 
     End Sub
-    Private Sub minimizePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles minimizeInventoryAuditForm.Click
+    Private Sub minimizePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles minimizeRecordUpdateForm.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
     ''=========================================================================
@@ -42,6 +39,5 @@ Public Class InventoryAudit_form
     ''=========================================================================
     ''========taskbar drag end=====================================================
     ''=========================================================================
-
 
 End Class

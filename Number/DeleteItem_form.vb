@@ -180,8 +180,8 @@ Public Class DeleteItem_form
             LabelProductName.Text = row.Cells(1).Value.ToString()
             LabelCompanyName.Text = row.Cells(2).Value.ToString()
             LabelAddress.Text = row.Cells(3).Value.ToString()
-            LabelUnitPrice.Text = row.Cells(4).Value.ToString()
-            LabelUnitTax.Text = row.Cells(5).Value.ToString()
+            LabelTelephone.Text = row.Cells(4).Value.ToString()
+            LabelUnitPrice.Text = row.Cells(5).Value.ToString()
         End If
         ''==='======================================
         ''gets a collection that contains all the rows

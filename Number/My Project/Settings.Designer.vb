@@ -30,9 +30,9 @@ Namespace My
 
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
     Private Shared Sub AutoSaveSettings(ByVal sender As Global.System.Object, ByVal e As Global.System.EventArgs)
-        If My.Application.SaveMySettingsOnExit Then
-            My.Settings.Save()
-        End If
+            If Application.SaveMySettingsOnExit Then
+                Settings.Save()
+            End If
     End Sub
 #End If
 #End Region
@@ -44,7 +44,7 @@ Namespace My
                If Not addedHandler Then
                     SyncLock addedHandlerLockObject
                         If Not addedHandler Then
-                            AddHandler My.Application.Shutdown, AddressOf AutoSaveSettings
+                            AddHandler Application.Shutdown, AddressOf AutoSaveSettings
                             addedHandler = True
                         End If
                     End SyncLock
@@ -64,6 +64,78 @@ Namespace My
             Get
                 Return CType(Me("Sqlitefolder"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting() As String
+            Get
+                Return CType(Me("Setting"),String)
+            End Get
+            Set
+                Me("Setting") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Registration() As String
+            Get
+                Return CType(Me("Registration"),String)
+            End Get
+            Set
+                Me("Registration") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Name() As String
+            Get
+                Return CType(Me("Name"),String)
+            End Get
+            Set
+                Me("Name") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Address() As String
+            Get
+                Return CType(Me("Address"),String)
+            End Get
+            Set
+                Me("Address") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Telephone() As String
+            Get
+                Return CType(Me("Telephone"),String)
+            End Get
+            Set
+                Me("Telephone") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")> _
+        Public Property Tax() As Integer
+            Get
+                Return CType(Me("Tax"), Integer)
+            End Get
+            Set(value As Integer)
+                Me("Tax") = value
+            End Set
         End Property
     End Class
 End Namespace

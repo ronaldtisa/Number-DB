@@ -9,6 +9,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UpdateForm", "UpdateForm\Up
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{769BC24B-912A-4DC2-B615-F1CA3415D49F}"
 	ProjectSection(SolutionItems) = preProject
+		Number\Item+.ico = Number\Item+.ico
 		NumberDB.ico = NumberDB.ico
 	EndProjectSection
 EndProject

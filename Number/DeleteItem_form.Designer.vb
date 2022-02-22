@@ -23,8 +23,8 @@ Partial Class DeleteItem_form
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeleteItem_form))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.minimizeDeleteItemForm = New System.Windows.Forms.Button()
         Me.CloseDeleteItemForm = New System.Windows.Forms.Button()
@@ -51,19 +51,21 @@ Partial Class DeleteItem_form
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.LabelUnitTax = New System.Windows.Forms.Label()
-        Me.LabelUnitPrice = New System.Windows.Forms.Label()
-        Me.LabelTotalQuantity = New System.Windows.Forms.Label()
-        Me.LabelAddress = New System.Windows.Forms.Label()
-        Me.LabelTelephone = New System.Windows.Forms.Label()
-        Me.LabelCompanyName = New System.Windows.Forms.Label()
-        Me.LabelProductName = New System.Windows.Forms.Label()
-        Me.LabelCode = New System.Windows.Forms.Label()
+        Me.LabelCode = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LabelProductName = New System.Windows.Forms.TextBox()
+        Me.LabelCompanyName = New System.Windows.Forms.TextBox()
+        Me.LabelAddress = New System.Windows.Forms.TextBox()
+        Me.LabelTelephone = New System.Windows.Forms.TextBox()
+        Me.LabelUnitPrice = New System.Windows.Forms.TextBox()
+        Me.LabelUnitTax = New System.Windows.Forms.TextBox()
+        Me.LabelTotalQuantity = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.searchresult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox2
@@ -214,19 +216,19 @@ Partial Class DeleteItem_form
         '
         'searchresult
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.searchresult.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.searchresult.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.searchresult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.searchresult.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.searchresult.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.searchresult.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.searchresult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.searchresult.Location = New System.Drawing.Point(0, 144)
         Me.searchresult.Name = "searchresult"
@@ -251,6 +253,15 @@ Partial Class DeleteItem_form
         Me.Panel4.AutoSize = True
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel4.Controls.Add(Me.LabelTotalQuantity)
+        Me.Panel4.Controls.Add(Me.LabelUnitTax)
+        Me.Panel4.Controls.Add(Me.LabelUnitPrice)
+        Me.Panel4.Controls.Add(Me.LabelTelephone)
+        Me.Panel4.Controls.Add(Me.LabelAddress)
+        Me.Panel4.Controls.Add(Me.LabelCompanyName)
+        Me.Panel4.Controls.Add(Me.LabelProductName)
+        Me.Panel4.Controls.Add(Me.PictureBox1)
+        Me.Panel4.Controls.Add(Me.LabelCode)
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.Button3)
         Me.Panel4.Controls.Add(Me.Label9)
@@ -261,14 +272,6 @@ Partial Class DeleteItem_form
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Controls.Add(Me.LabelUnitTax)
-        Me.Panel4.Controls.Add(Me.LabelUnitPrice)
-        Me.Panel4.Controls.Add(Me.LabelTotalQuantity)
-        Me.Panel4.Controls.Add(Me.LabelAddress)
-        Me.Panel4.Controls.Add(Me.LabelTelephone)
-        Me.Panel4.Controls.Add(Me.LabelCompanyName)
-        Me.Panel4.Controls.Add(Me.LabelProductName)
-        Me.Panel4.Controls.Add(Me.LabelCode)
         Me.Panel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel4.Location = New System.Drawing.Point(560, 40)
         Me.Panel4.Name = "Panel4"
@@ -302,7 +305,7 @@ Partial Class DeleteItem_form
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(8, 488)
+        Me.Label9.Location = New System.Drawing.Point(448, 416)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(127, 16)
         Me.Label9.TabIndex = 13
@@ -312,7 +315,7 @@ Partial Class DeleteItem_form
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(8, 448)
+        Me.Label8.Location = New System.Drawing.Point(248, 416)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(63, 16)
         Me.Label8.TabIndex = 12
@@ -322,7 +325,7 @@ Partial Class DeleteItem_form
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(8, 408)
+        Me.Label7.Location = New System.Drawing.Point(8, 416)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 16)
         Me.Label7.TabIndex = 11
@@ -332,7 +335,7 @@ Partial Class DeleteItem_form
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(8, 368)
+        Me.Label6.Location = New System.Drawing.Point(0, 360)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(101, 16)
         Me.Label6.TabIndex = 10
@@ -342,7 +345,7 @@ Partial Class DeleteItem_form
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(8, 160)
+        Me.Label5.Location = New System.Drawing.Point(8, 184)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(126, 16)
         Me.Label5.TabIndex = 9
@@ -352,7 +355,7 @@ Partial Class DeleteItem_form
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 112)
+        Me.Label4.Location = New System.Drawing.Point(8, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(112, 16)
         Me.Label4.TabIndex = 8
@@ -378,102 +381,77 @@ Partial Class DeleteItem_form
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Item Code :"
         '
-        'LabelUnitTax
+        'LabelCode
         '
-        Me.LabelUnitTax.AutoSize = True
-        Me.LabelUnitTax.BackColor = System.Drawing.Color.White
-        Me.LabelUnitTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelUnitTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelUnitTax.Location = New System.Drawing.Point(9, 503)
-        Me.LabelUnitTax.Name = "LabelUnitTax"
-        Me.LabelUnitTax.Size = New System.Drawing.Size(51, 18)
-        Me.LabelUnitTax.TabIndex = 5
-        Me.LabelUnitTax.Text = "Label9"
+        Me.LabelCode.Location = New System.Drawing.Point(8, 40)
+        Me.LabelCode.Multiline = True
+        Me.LabelCode.Name = "LabelCode"
+        Me.LabelCode.Size = New System.Drawing.Size(504, 24)
+        Me.LabelCode.TabIndex = 16
         '
-        'LabelUnitPrice
+        'PictureBox1
         '
-        Me.LabelUnitPrice.AutoSize = True
-        Me.LabelUnitPrice.BackColor = System.Drawing.Color.White
-        Me.LabelUnitPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelUnitPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelUnitPrice.Location = New System.Drawing.Point(8, 464)
-        Me.LabelUnitPrice.Name = "LabelUnitPrice"
-        Me.LabelUnitPrice.Size = New System.Drawing.Size(51, 18)
-        Me.LabelUnitPrice.TabIndex = 4
-        Me.LabelUnitPrice.Text = "Label7"
-        '
-        'LabelTotalQuantity
-        '
-        Me.LabelTotalQuantity.AutoSize = True
-        Me.LabelTotalQuantity.BackColor = System.Drawing.Color.White
-        Me.LabelTotalQuantity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelTotalQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTotalQuantity.Location = New System.Drawing.Point(8, 424)
-        Me.LabelTotalQuantity.Name = "LabelTotalQuantity"
-        Me.LabelTotalQuantity.Size = New System.Drawing.Size(51, 18)
-        Me.LabelTotalQuantity.TabIndex = 4
-        Me.LabelTotalQuantity.Text = "Label7"
-        '
-        'LabelAddress
-        '
-        Me.LabelAddress.AutoSize = True
-        Me.LabelAddress.BackColor = System.Drawing.Color.White
-        Me.LabelAddress.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAddress.Location = New System.Drawing.Point(8, 176)
-        Me.LabelAddress.Name = "LabelAddress"
-        Me.LabelAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.LabelAddress.Size = New System.Drawing.Size(51, 18)
-        Me.LabelAddress.TabIndex = 3
-        Me.LabelAddress.Text = "Label5"
-        '
-        'LabelTelephone
-        '
-        Me.LabelTelephone.AutoSize = True
-        Me.LabelTelephone.BackColor = System.Drawing.Color.White
-        Me.LabelTelephone.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTelephone.Location = New System.Drawing.Point(8, 384)
-        Me.LabelTelephone.Name = "LabelTelephone"
-        Me.LabelTelephone.Size = New System.Drawing.Size(51, 18)
-        Me.LabelTelephone.TabIndex = 3
-        Me.LabelTelephone.Text = "Label5"
-        '
-        'LabelCompanyName
-        '
-        Me.LabelCompanyName.AutoSize = True
-        Me.LabelCompanyName.BackColor = System.Drawing.Color.White
-        Me.LabelCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelCompanyName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelCompanyName.Location = New System.Drawing.Point(8, 128)
-        Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(51, 18)
-        Me.LabelCompanyName.TabIndex = 2
-        Me.LabelCompanyName.Text = "Label4"
+        Me.PictureBox1.Location = New System.Drawing.Point(520, 40)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(164, 160)
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
         '
         'LabelProductName
         '
-        Me.LabelProductName.AutoSize = True
-        Me.LabelProductName.BackColor = System.Drawing.Color.White
-        Me.LabelProductName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelProductName.Location = New System.Drawing.Point(8, 88)
+        Me.LabelProductName.Multiline = True
         Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(51, 18)
-        Me.LabelProductName.TabIndex = 1
-        Me.LabelProductName.Text = "Label3"
+        Me.LabelProductName.Size = New System.Drawing.Size(504, 40)
+        Me.LabelProductName.TabIndex = 18
         '
-        'LabelCode
+        'LabelCompanyName
         '
-        Me.LabelCode.AutoSize = True
-        Me.LabelCode.BackColor = System.Drawing.Color.White
-        Me.LabelCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelCode.Location = New System.Drawing.Point(8, 40)
-        Me.LabelCode.Name = "LabelCode"
-        Me.LabelCode.Size = New System.Drawing.Size(51, 18)
-        Me.LabelCode.TabIndex = 0
-        Me.LabelCode.Text = "Label2"
+        Me.LabelCompanyName.Location = New System.Drawing.Point(8, 144)
+        Me.LabelCompanyName.Multiline = True
+        Me.LabelCompanyName.Name = "LabelCompanyName"
+        Me.LabelCompanyName.Size = New System.Drawing.Size(504, 40)
+        Me.LabelCompanyName.TabIndex = 19
+        '
+        'LabelAddress
+        '
+        Me.LabelAddress.Location = New System.Drawing.Point(8, 200)
+        Me.LabelAddress.Multiline = True
+        Me.LabelAddress.Name = "LabelAddress"
+        Me.LabelAddress.Size = New System.Drawing.Size(680, 160)
+        Me.LabelAddress.TabIndex = 20
+        '
+        'LabelTelephone
+        '
+        Me.LabelTelephone.Location = New System.Drawing.Point(8, 376)
+        Me.LabelTelephone.Multiline = True
+        Me.LabelTelephone.Name = "LabelTelephone"
+        Me.LabelTelephone.Size = New System.Drawing.Size(680, 24)
+        Me.LabelTelephone.TabIndex = 21
+        '
+        'LabelUnitPrice
+        '
+        Me.LabelUnitPrice.Location = New System.Drawing.Point(8, 432)
+        Me.LabelUnitPrice.Multiline = True
+        Me.LabelUnitPrice.Name = "LabelUnitPrice"
+        Me.LabelUnitPrice.Size = New System.Drawing.Size(152, 24)
+        Me.LabelUnitPrice.TabIndex = 22
+        '
+        'LabelUnitTax
+        '
+        Me.LabelUnitTax.Location = New System.Drawing.Point(248, 432)
+        Me.LabelUnitTax.Multiline = True
+        Me.LabelUnitTax.Name = "LabelUnitTax"
+        Me.LabelUnitTax.Size = New System.Drawing.Size(144, 24)
+        Me.LabelUnitTax.TabIndex = 23
+        '
+        'LabelTotalQuantity
+        '
+        Me.LabelTotalQuantity.Location = New System.Drawing.Point(448, 432)
+        Me.LabelTotalQuantity.Multiline = True
+        Me.LabelTotalQuantity.Name = "LabelTotalQuantity"
+        Me.LabelTotalQuantity.Size = New System.Drawing.Size(184, 24)
+        Me.LabelTotalQuantity.TabIndex = 24
         '
         'DeleteItem_form
         '
@@ -500,6 +478,7 @@ Partial Class DeleteItem_form
         CType(Me.searchresult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -520,14 +499,6 @@ Partial Class DeleteItem_form
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents LabelCode As System.Windows.Forms.Label
-    Friend WithEvents LabelUnitTax As System.Windows.Forms.Label
-    Friend WithEvents LabelUnitPrice As System.Windows.Forms.Label
-    Friend WithEvents LabelTotalQuantity As System.Windows.Forms.Label
-    Friend WithEvents LabelAddress As System.Windows.Forms.Label
-    Friend WithEvents LabelTelephone As System.Windows.Forms.Label
-    Friend WithEvents LabelCompanyName As System.Windows.Forms.Label
-    Friend WithEvents LabelProductName As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -538,4 +509,13 @@ Partial Class DeleteItem_form
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents LabelTotalQuantity As System.Windows.Forms.TextBox
+    Friend WithEvents LabelUnitTax As System.Windows.Forms.TextBox
+    Friend WithEvents LabelUnitPrice As System.Windows.Forms.TextBox
+    Friend WithEvents LabelTelephone As System.Windows.Forms.TextBox
+    Friend WithEvents LabelAddress As System.Windows.Forms.TextBox
+    Friend WithEvents LabelCompanyName As System.Windows.Forms.TextBox
+    Friend WithEvents LabelProductName As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents LabelCode As System.Windows.Forms.TextBox
 End Class
