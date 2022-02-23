@@ -36,7 +36,7 @@ Public Class mainGUI
                             ''==================================================================
                             ''get Total price value
                             ''==================================================================
-                            dt.Columns.Add("TotalValue", GetType(String))
+
                             For i As Integer = 0 To dt.Rows.Count - 1
                                 Dim value1 As String = Convert.ToString(dt.Rows(i)("Quantity"))
                                 Dim value2 As String = Convert.ToString(dt.Rows(i)("UnitPrice"))
@@ -175,19 +175,9 @@ Public Class mainGUI
     Private Sub watch_Tick(sender As Object, e As EventArgs) Handles watch.Tick
         Dim Today As Object
         Today = Now
-
-
-
-
-
-
-
-
-
-
-
         DMYval.Text = Format(Today, "dd / MMMM / yyyy")
         TIval.Text = Format(Today, " h:mm:ss tt")
+
 
         secondBar1.Value = Format(Today, "ss")
         MainCompanyName.Text = My.Settings.Name

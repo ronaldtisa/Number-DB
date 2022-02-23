@@ -46,6 +46,14 @@ Partial Class mainGUI
         Me.watch = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ItemView = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SpinningProgress1 = New Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.secondBar1 = New System.Windows.Forms.ProgressBar()
+        Me.MainCompanyName = New System.Windows.Forms.TextBox()
         Me.Number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,14 +63,6 @@ Partial Class mainGUI
         Me.UnitPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalValue = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.SpinningProgress1 = New Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.secondBar1 = New System.Windows.Forms.ProgressBar()
-        Me.MainCompanyName = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -263,7 +263,6 @@ Partial Class mainGUI
         Me.ItemView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ItemView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.ItemView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ItemView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.ItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -275,80 +274,6 @@ Partial Class mainGUI
         Me.ItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ItemView.Size = New System.Drawing.Size(1265, 517)
         Me.ItemView.TabIndex = 10
-        '
-        'Number
-        '
-        Me.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Number.HeaderText = "No :"
-        Me.Number.Name = "Number"
-        Me.Number.ReadOnly = True
-        Me.Number.Width = 46
-        '
-        'ProductCode
-        '
-        Me.ProductCode.DataPropertyName = "Code"
-        Me.ProductCode.HeaderText = "Product Code :"
-        Me.ProductCode.Name = "ProductCode"
-        Me.ProductCode.ReadOnly = True
-        '
-        'ProductName
-        '
-        Me.ProductName.DataPropertyName = "ProductName"
-        Me.ProductName.HeaderText = "Product Name:"
-        Me.ProductName.Name = "ProductName"
-        Me.ProductName.ReadOnly = True
-        '
-        'CompanyName
-        '
-        Me.CompanyName.DataPropertyName = "CompanyName"
-        Me.CompanyName.HeaderText = "Company Name :"
-        Me.CompanyName.Name = "CompanyName"
-        Me.CompanyName.ReadOnly = True
-        '
-        'TelephoneNumber
-        '
-        Me.TelephoneNumber.DataPropertyName = "Telephone"
-        Me.TelephoneNumber.HeaderText = "Telephone :"
-        Me.TelephoneNumber.Name = "TelephoneNumber"
-        Me.TelephoneNumber.ReadOnly = True
-        '
-        'CompanyAddress
-        '
-        Me.CompanyAddress.DataPropertyName = "Address"
-        Me.CompanyAddress.HeaderText = "Company Address :"
-        Me.CompanyAddress.Name = "CompanyAddress"
-        Me.CompanyAddress.ReadOnly = True
-        '
-        'UnitPrice
-        '
-        Me.UnitPrice.DataPropertyName = "UnitPrice"
-        DataGridViewCellStyle1.Format = "C1"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.UnitPrice.DefaultCellStyle = DataGridViewCellStyle1
-        Me.UnitPrice.HeaderText = "Unit Price :"
-        Me.UnitPrice.Name = "UnitPrice"
-        Me.UnitPrice.ReadOnly = True
-        '
-        'Quantity
-        '
-        Me.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Quantity.DataPropertyName = "Quantity"
-        Me.Quantity.HeaderText = "Stock"
-        Me.Quantity.Name = "Quantity"
-        Me.Quantity.ReadOnly = True
-        Me.Quantity.Width = 60
-        '
-        'TotalValue
-        '
-        Me.TotalValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.TotalValue.DataPropertyName = "TotalValue"
-        DataGridViewCellStyle2.Format = "C1"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.TotalValue.DefaultCellStyle = DataGridViewCellStyle2
-        Me.TotalValue.HeaderText = "Total Price Value :"
-        Me.TotalValue.Name = "TotalValue"
-        Me.TotalValue.ReadOnly = True
-        Me.TotalValue.Width = 109
         '
         'Panel1
         '
@@ -439,6 +364,86 @@ Partial Class mainGUI
         Me.MainCompanyName.Size = New System.Drawing.Size(288, 34)
         Me.MainCompanyName.TabIndex = 0
         '
+        'Number
+        '
+        Me.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Number.HeaderText = "No :"
+        Me.Number.Name = "Number"
+        Me.Number.ReadOnly = True
+        Me.Number.Width = 52
+        '
+        'ProductCode
+        '
+        Me.ProductCode.DataPropertyName = "Code"
+        Me.ProductCode.HeaderText = "Product Code :"
+        Me.ProductCode.Name = "ProductCode"
+        Me.ProductCode.ReadOnly = True
+        Me.ProductCode.Width = 165
+        '
+        'ProductName
+        '
+        Me.ProductName.DataPropertyName = "ProductName"
+        Me.ProductName.HeaderText = "Product Name:"
+        Me.ProductName.Name = "ProductName"
+        Me.ProductName.ReadOnly = True
+        Me.ProductName.Width = 165
+        '
+        'CompanyName
+        '
+        Me.CompanyName.DataPropertyName = "CompanyName"
+        Me.CompanyName.HeaderText = "Company Name :"
+        Me.CompanyName.Name = "CompanyName"
+        Me.CompanyName.ReadOnly = True
+        Me.CompanyName.Width = 166
+        '
+        'TelephoneNumber
+        '
+        Me.TelephoneNumber.DataPropertyName = "Telephone"
+        Me.TelephoneNumber.HeaderText = "Telephone :"
+        Me.TelephoneNumber.Name = "TelephoneNumber"
+        Me.TelephoneNumber.ReadOnly = True
+        Me.TelephoneNumber.Width = 165
+        '
+        'CompanyAddress
+        '
+        Me.CompanyAddress.DataPropertyName = "Address"
+        Me.CompanyAddress.HeaderText = "Company Address :"
+        Me.CompanyAddress.Name = "CompanyAddress"
+        Me.CompanyAddress.ReadOnly = True
+        Me.CompanyAddress.Width = 165
+        '
+        'UnitPrice
+        '
+        Me.UnitPrice.DataPropertyName = "UnitPrice"
+        DataGridViewCellStyle1.Format = "C1"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.UnitPrice.DefaultCellStyle = DataGridViewCellStyle1
+        Me.UnitPrice.HeaderText = "Unit Price :"
+        Me.UnitPrice.Name = "UnitPrice"
+        Me.UnitPrice.ReadOnly = True
+        Me.UnitPrice.Width = 165
+        '
+        'Quantity
+        '
+        Me.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Quantity.DataPropertyName = "Quantity"
+        Me.Quantity.HeaderText = "Stock"
+        Me.Quantity.Name = "Quantity"
+        Me.Quantity.ReadOnly = True
+        Me.Quantity.Width = 60
+        '
+        'TotalValue
+        '
+        Me.TotalValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.TotalValue.DataPropertyName = "TotalValue"
+        DataGridViewCellStyle2.Format = "C1"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.TotalValue.DefaultCellStyle = DataGridViewCellStyle2
+        Me.TotalValue.HeaderText = "Total Price Value :"
+        Me.TotalValue.Name = "TotalValue"
+        Me.TotalValue.ReadOnly = True
+        Me.TotalValue.Width = 119
+        '
         'mainGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -491,6 +496,11 @@ Partial Class mainGUI
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents MainCompanyName As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents secondBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents SpinningProgress1 As Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress
     Friend WithEvents Number As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ProductCode As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ProductName As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -500,11 +510,6 @@ Partial Class mainGUI
     Friend WithEvents UnitPrice As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Quantity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TotalValue As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents MainCompanyName As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents secondBar1 As System.Windows.Forms.ProgressBar
-    Friend WithEvents SpinningProgress1 As Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress
 End Class
 
 

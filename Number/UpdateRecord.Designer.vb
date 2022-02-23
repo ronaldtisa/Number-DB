@@ -22,10 +22,8 @@ Partial Class UpdateRecord
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateRecord))
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.purchasegridview = New System.Windows.Forms.DataGridView()
         Me.No = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,42 +40,19 @@ Partial Class UpdateRecord
         Me.CloseRecordUpdateForm = New System.Windows.Forms.Button()
         Me.maximizeRecordUpdateForm = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Panel2.SuspendLayout()
+        Me.Supplier = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Inventory = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.purchasegridview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
-        Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(0, 56)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2210, 72)
-        Me.Panel2.TabIndex = 29
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Supplier :"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(8, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(576, 24)
-        Me.ComboBox1.TabIndex = 0
         '
         'purchasegridview
         '
@@ -88,9 +63,9 @@ Partial Class UpdateRecord
         Me.purchasegridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.purchasegridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.purchasegridview.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.No, Me.ProductCode, Me.ProductName, Me.Stock, Me.ToOrder})
-        Me.purchasegridview.Location = New System.Drawing.Point(0, 144)
+        Me.purchasegridview.Location = New System.Drawing.Point(0, 184)
         Me.purchasegridview.Name = "purchasegridview"
-        Me.purchasegridview.Size = New System.Drawing.Size(1248, 670)
+        Me.purchasegridview.Size = New System.Drawing.Size(1248, 630)
         Me.purchasegridview.TabIndex = 28
         '
         'No
@@ -252,27 +227,80 @@ Partial Class UpdateRecord
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
+        'Supplier
+        '
+        Me.Supplier.BackColor = System.Drawing.Color.White
+        Me.Supplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Supplier.Image = CType(resources.GetObject("Supplier.Image"), System.Drawing.Image)
+        Me.Supplier.Location = New System.Drawing.Point(3, 3)
+        Me.Supplier.Name = "Supplier"
+        Me.Supplier.Size = New System.Drawing.Size(72, 72)
+        Me.Supplier.TabIndex = 29
+        Me.Supplier.UseVisualStyleBackColor = False
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.Supplier)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Inventory)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(32, 24)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(160, 80)
+        Me.FlowLayoutPanel1.TabIndex = 30
+        '
+        'Inventory
+        '
+        Me.Inventory.BackColor = System.Drawing.Color.White
+        Me.Inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Inventory.Image = CType(resources.GetObject("Inventory.Image"), System.Drawing.Image)
+        Me.Inventory.Location = New System.Drawing.Point(81, 3)
+        Me.Inventory.Name = "Inventory"
+        Me.Inventory.Size = New System.Drawing.Size(72, 72)
+        Me.Inventory.TabIndex = 30
+        Me.Inventory.UseVisualStyleBackColor = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.TextBox1)
+        Me.Panel4.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Panel4.Location = New System.Drawing.Point(520, 48)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(224, 108)
+        Me.Panel4.TabIndex = 31
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Location = New System.Drawing.Point(16, 0)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
+        Me.TextBox1.TabIndex = 31
+        Me.TextBox1.Text = "Select which record you want to update"
+        '
         'UpdateRecord
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1246, 603)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.purchasegridview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "UpdateRecord"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateRecord"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.purchasegridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -295,4 +323,10 @@ Partial Class UpdateRecord
     Friend WithEvents CloseRecordUpdateForm As System.Windows.Forms.Button
     Friend WithEvents maximizeRecordUpdateForm As System.Windows.Forms.Button
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Supplier As System.Windows.Forms.Button
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Inventory As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
