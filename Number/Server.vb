@@ -8,6 +8,16 @@ Imports System.Windows
 
 
 Public Class Server
+
+    '' opt sql command line ========================
+
+    Private Const tblsupplier As String = "Create table 'Supplier'( 'Id_num' INT,'Registration' NCHAR, 'CompanyName' NCHAR, 'CompanyAddress' NCHAR, 'CompanyTelephone' NCHAR, PRIMARY KEY( Id_num, CompanyName ));"
+    Private Const tblsales As String = "Create table 'Sales'( 'Id_PurchaseReceiptNum', INT,' Date' NUM,'ProductName' NCHAR);"
+
+    Private Const tblManagement As String = "Create table 'Management' ( 'Id_UserName' NCHAR, 'ContactNumber' NCHAR, 'Address' NCHAR, 'Duty' NCHAR, PRIMARY KEY ( Id_UserName ));"
+
+
+
     ''where to store file
     ''named database
     ''combine database file together
@@ -51,9 +61,20 @@ Public Class Server
 
     End Sub
 
+    ''create boolean value
+    ''return value if file exist or not
+    Private Function duplicateDataBase(fullPath As String) As Boolean
+        Return System.IO.File.Exists(fullPath)
+    End Function
+
+    Dim servercon As SQLiteConnection
+    Dim servercom As New SQLiteCommand
+    Dim serverda As New SQLiteDataAdapter
+    Dim dts As DataSet
 
     Public Sub createDatabase()
         If Not duplicateDataBase(fullPath) Then
+
 
             Dim createTable As String = "CREATE TABLE 'Inventory'( 'Code' NCHAR, 'ProductName' NCHAR,'CompanyName' NCHAR, 'Address' NCHAR, 'Telephone' NCHAR, 'Quantity' NCHAR NULL, 'UnitPrice'NUM NULL, 'UnitTax' NUM NULL );"
 
@@ -74,6 +95,48 @@ Public Class Server
 
 
             End Using
+            ''============= 2 ============================================
+            Using servercon As New SQLiteConnection(connectionString)
+                servercom = New SQLiteCommand(tblsupplier, servercon)
+                servercon.Open()
+                Try
+                    servercom.ExecuteNonQuery()
+                    MsgBox("Success step 2", MsgBoxStyle.Information, Title:="Success")
+                Catch ex As Exception
+                    MsgBox("error on step 2")
+                End Try
+
+            End Using
+
+            ''============= 3 ============================================
+            Using servercon As New SQLiteConnection(connectionString)
+                servercom = New SQLiteCommand(tblsales, servercon)
+                servercon.Open()
+                Try
+                    servercom.ExecuteNonQuery()
+                    MsgBox("Success step 3", MsgBoxStyle.Information, Title:="Success")
+                Catch ex As Exception
+                    MsgBox("error on step 3")
+                End Try
+
+            End Using
+
+            ''============= 4 ============================================
+            Using servercon As New SQLiteConnection(connectionString)
+                servercom = New SQLiteCommand(tblManagement, servercon)
+                servercon.Open()
+                Try
+                    servercom.ExecuteNonQuery()
+                    MsgBox("Success step 4", MsgBoxStyle.Information, Title:="Success")
+                Catch ex As Exception
+                    MsgBox("error on step 4")
+                End Try
+
+            End Using
+
+
+
+
 
         End If
 
@@ -81,24 +144,5 @@ Public Class Server
 
 
 
-    ''create boolean value
-    ''return value if file exist or not
-    Private Function duplicateDataBase(fullPath As String) As Boolean
-        Return System.IO.File.Exists(fullPath)
-    End Function
-
-
-    ''=========================================
-    ''dataview
-    ''=========================================
-
-
-    Public Sub dataviewSQLite()
-       
-
-    End Sub
-
-
-
-
+   
 End Class

@@ -47,7 +47,7 @@ Partial Class InventoryAudit_form
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.SupplierComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -240,7 +240,7 @@ Partial Class InventoryAudit_form
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.SupplierComboBox1)
         Me.Panel2.Location = New System.Drawing.Point(8, 48)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1248, 96)
@@ -303,13 +303,13 @@ Partial Class InventoryAudit_form
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Supplier :"
         '
-        'ComboBox1
+        'SupplierComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(8, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(464, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.SupplierComboBox1.FormattingEnabled = True
+        Me.SupplierComboBox1.Location = New System.Drawing.Point(8, 24)
+        Me.SupplierComboBox1.Name = "SupplierComboBox1"
+        Me.SupplierComboBox1.Size = New System.Drawing.Size(464, 21)
+        Me.SupplierComboBox1.TabIndex = 0
         '
         'InventoryAudit_form
         '
@@ -360,5 +360,5 @@ Partial Class InventoryAudit_form
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents SupplierComboBox1 As System.Windows.Forms.ComboBox
 End Class

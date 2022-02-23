@@ -1,7 +1,11 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
 
 Public Class InventoryAudit_form
+    Private Const ConnectionString As String = ("Data Source=c:\Number Data Folder\numberform.db")
+    '' opt sql command line ========================
 
+    Private Const sqlsupplier As String = "SELECT Registration, CompanyName, CompanyAddress, CompanyTelephone FROM Supplier"
 
 
     Private Sub ClosePurchaseOrderForm_Click(sender As Object, e As EventArgs) Handles CloseInventoryAuditForm.Click
@@ -44,7 +48,40 @@ Public Class InventoryAudit_form
     ''=========================================================================
 
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SupplierComboBox1.SelectedIndexChanged
 
+    End Sub
+
+    Dim Auditcon As SQLiteConnection = New SQLiteConnection(ConnectionString)
+    Dim Auditcom As New SQLiteCommand
+    Dim Auditda As New SQLiteDataAdapter
+    Dim dts As DataSet
+
+
+    Private Sub InventoryAudit_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Auditcon.Open()
+            Auditcom = New SQLiteCommand()
+            Auditda = New SQLiteDataAdapter
+            dts = New DataSet
+
+            With Auditcom
+                .Connection = Auditcon
+                .CommandText = sqlsupplier
+            End With
+            With Auditda
+                .SelectCommand = Auditcom
+                .Fill(dts)
+            End With
+
+            Auditda.Dispose()
+            Auditcom.Dispose()
+            Auditcon.Close()
+            SupplierComboBox1.DataSource = dts.Tables(0)
+            SupplierComboBox1.ValueMember = "CompanyName"
+            SupplierComboBox1.DisplayMember = "CompanyName"
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
