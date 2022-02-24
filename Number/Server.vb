@@ -71,7 +71,7 @@ Public Class Server
     Dim servercom As New SQLiteCommand
     Dim serverda As New SQLiteDataAdapter
     Dim dts As DataSet
-
+    Dim progress As Boolean
     Public Sub createDatabase()
         If Not duplicateDataBase(fullPath) Then
 

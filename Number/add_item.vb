@@ -4,6 +4,13 @@ Imports System.Data.SqlClient
 Imports System.Data
 
 Public Class add_item
+
+    Private Const ConnectionString As String = ("Data Source=c:\Number Data Folder\numberform.db")
+
+
+    Dim sqliteCon As SQLiteConnection
+    Dim sqliteCom As SQLiteCommand
+
     ''====================================================
     ''button close
     ''====================================================
@@ -28,9 +35,9 @@ Public Class add_item
     End Sub
 
 
-
-
-    Private Const ConnectionString As String = ("Data Source=c:\Number Data Folder\numberform.db")
+    ''=======================================================================================
+    '' saving button code
+    ''========================================================================================
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 
         If ItemCode.Text.Trim = "" Then
@@ -59,10 +66,7 @@ Public Class add_item
             Telephone.Focus()
             Exit Sub
         End If
-
-
         '' Dim createTable As String = "INSERT INTO 'Inventory'( 'Code' NCHAR, 'ProductName' NCHAR, 'Address' NCHAR, 'Telephone' NCHAR);"
-
 
         Dim sqlite_Con As New SQLiteConnection(ConnectionString)
         Dim sqlite_com As New SQLiteCommand("INSERT INTO Inventory (Code, ProductName, CompanyName, Address, Telephone, Quantity, UnitPrice, UnitTax) VALUES('" + ItemCode.Text + "','" + ItemName.Text + "','" + CompanydName.Text + "','" + Address.Text + "','" + Telephone.Text + "','" + Quantity.Text + "','" + UnitPrice.Text + "', '" + UnitTax.Text + "')", sqlite_Con)
@@ -72,9 +76,7 @@ Public Class add_item
         sqlite_com.ExecuteNonQuery()
         mainGUI.reload_Main()
         sqlite_Con.Close()
-
         MsgBox("New Item Inserted", MsgBoxStyle.OkOnly)
-
         ItemCode.Clear()
         ItemName.Clear()
         CompanydName.Clear()
@@ -83,19 +85,40 @@ Public Class add_item
         Quantity.Clear()
         UnitPrice.Clear()
         UnitTax.Clear()
-
-
-
-
-
         ''==========================================================
         '' update main menu datagrid=after insert data==============
         ''==========================================================
-
-       
-
-
     End Sub
 
-
+    Public Sub Button2_Click(sender As Object, e As EventArgs) Handles SaveSupplier.Click
+        If NewSupplierRegistration.Text.Trim = "" Then
+            MsgBox("Registration Number Cannot be blank", MsgBoxStyle.Information, Title:="Error")
+            NewSupplierRegistration.Focus()
+            Exit Sub
+        End If
+        If NewSupplierName.Text.Trim = "" Then
+            MsgBox("CompanyName Cannot be blank", MsgBoxStyle.Information, Title:="Error")
+            NewSupplierName.Focus()
+            Exit Sub
+        End If
+        If NewSupplierAddress.Text.Trim = "" Then
+            MsgBox("Address Cannot be blank", MsgBoxStyle.Information, Title:="Error")
+            ItemCode.Focus()
+            Exit Sub
+        End If
+        If NewSupplierTelephone.Text.Trim = "" Then
+            MsgBox("Telephone Number Cannot be blank", MsgBoxStyle.Information, Title:="Error")
+            ItemCode.Focus()
+            Exit Sub
+        End If
+        Dim sqliteCon As New SQLiteConnection(ConnectionString)
+        Dim sqliteCom = New SQLiteCommand("INSERT INTO Supplier (Registration, CompanyName, CompanyAddress, CompanyTelephone ) VALUES( '" + NewSupplierRegistration.Text + "', '" + NewSupplierName.Text + "', '" + NewSupplierAddress.Text + "', '" + NewSupplierTelephone.Text + "')", sqliteCon)
+        Try
+            sqliteCon.Open()
+            sqliteCom.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("Error entering Supplier Data", MsgBoxStyle.OkOnly)
+        End Try
+        MsgBox("New Item Inserted", MsgBoxStyle.OkOnly)
+    End Sub
 End Class

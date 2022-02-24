@@ -214,6 +214,7 @@
     <Compile Include="UpdateRecord.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="writeDataConfig.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CompanyConfiguration.resx">
@@ -297,6 +298,7 @@
     <Content Include="supplierIcon.ico" />
     <Content Include="updatebutt.ico" />
     <Content Include="updateitembutt.bmp" />
+    <Content Include="Updaterecorditem.ico" />
     <None Include="Item+.ico" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
